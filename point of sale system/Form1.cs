@@ -10,11 +10,39 @@ using System.Windows.Forms;
 
 namespace point_of_sale_system
 {
-    public partial class Form1 : Form
+    public partial class mainFrm : Form
     {
-        public Form1()
+        public mainFrm()
         {
             InitializeComponent();
+            cmboBoxUsers.SelectedIndex = 1;
+
+            
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            saleFrm sale = new saleFrm();
+            sale.Show();
+            this.Hide();
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            saleMngFrm saleMng = new saleMngFrm();
+            saleMng.Show();
+            this.Hide();
+            
+        }
+
+        private void cmboBoxUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,0 +1,20 @@
+C:\College\C#\point of sale system\point of sale system\bin\Debug\point of sale system.exe.config
+C:\College\C#\point of sale system\point of sale system\bin\Debug\point of sale system.exe
+C:\College\C#\point of sale system\point of sale system\bin\Debug\point of sale system.pdb
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of sale system.csproj.AssemblyReference.cache
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Properties.Resources.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.SaleForm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of sale system.csproj.GenerateResource.cache
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of sale system.csproj.CoreCompileInputs.cache
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of sale system.exe
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of sale system.pdb
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Products.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.AddItem.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Edit.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Inventory.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.PasswordFrm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.QuickList.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.SaleInfo.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.mainFrm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.saleMngFrm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.saleFrm.resources
