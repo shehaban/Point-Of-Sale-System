@@ -61,6 +61,7 @@ namespace point_of_sale_system
 
         private void mngbtn_Click(object sender, EventArgs e)
         {
+            showUserControl(new passwordMng());
             SetActiveButton(mngbtn);
         }
 

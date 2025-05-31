@@ -76,6 +76,12 @@
     <Compile Include="PasswordFrm.Designer.cs">
       <DependentUpon>PasswordFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="passwordMng.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="passwordMng.Designer.cs">
+      <DependentUpon>passwordMng.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <EmbeddedResource Include="PasswordFrm.resx">
       <DependentUpon>PasswordFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="passwordMng.resx">
+      <DependentUpon>passwordMng.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Products.resx">
       <DependentUpon>Products.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-icon %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software-Pricing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software-Pricing1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software-Pricing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-Software-Pricing1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

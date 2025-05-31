@@ -38,46 +38,51 @@
             // 
             // mngbtn
             // 
+            this.mngbtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.mngbtn.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mngbtn.Location = new System.Drawing.Point(12, 442);
             this.mngbtn.Name = "mngbtn";
             this.mngbtn.Size = new System.Drawing.Size(184, 95);
             this.mngbtn.TabIndex = 9;
-            this.mngbtn.Text = "Manage System";
-            this.mngbtn.UseVisualStyleBackColor = true;
+            this.mngbtn.Text = "Manage Password";
+            this.mngbtn.UseVisualStyleBackColor = false;
             this.mngbtn.Click += new System.EventHandler(this.mngbtn_Click);
             // 
             // btnSalesMng
             // 
+            this.btnSalesMng.BackColor = System.Drawing.Color.Lavender;
             this.btnSalesMng.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesMng.Location = new System.Drawing.Point(12, 294);
             this.btnSalesMng.Name = "btnSalesMng";
             this.btnSalesMng.Size = new System.Drawing.Size(184, 98);
             this.btnSalesMng.TabIndex = 8;
             this.btnSalesMng.Text = "Sales Information";
-            this.btnSalesMng.UseVisualStyleBackColor = true;
+            this.btnSalesMng.UseVisualStyleBackColor = false;
             this.btnSalesMng.Click += new System.EventHandler(this.btnSalesMng_Click);
             // 
             // btnInventory
             // 
+            this.btnInventory.BackColor = System.Drawing.Color.PaleGreen;
             this.btnInventory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Location = new System.Drawing.Point(12, 150);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(184, 98);
             this.btnInventory.TabIndex = 7;
             this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.UseVisualStyleBackColor = false;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btnProducts
             // 
+            this.btnProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.btnProducts.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducts.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnProducts.Location = new System.Drawing.Point(12, 12);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(184, 98);
             this.btnProducts.TabIndex = 6;
             this.btnProducts.Text = "Products";
-            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.UseVisualStyleBackColor = false;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click_1);
             // 
             // mainPanel
@@ -89,13 +94,15 @@
             // 
             // homebtn
             // 
+            this.homebtn.BackColor = System.Drawing.Color.Red;
             this.homebtn.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homebtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.homebtn.Location = new System.Drawing.Point(12, 583);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(184, 95);
             this.homebtn.TabIndex = 11;
             this.homebtn.Text = "Home Page";
-            this.homebtn.UseVisualStyleBackColor = true;
+            this.homebtn.UseVisualStyleBackColor = false;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
             // saleMngFrm
