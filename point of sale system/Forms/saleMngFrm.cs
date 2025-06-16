@@ -26,16 +26,16 @@ namespace point_of_sale_system
         {
             foreach (Button btn in navButtons)
             {
-                btn.BackColor = Color.LightGray; // لون عادي
+                btn.BackColor = Color.LightGray; 
             }
 
-            activeButton.BackColor = Color.SteelBlue; // لون الزر النشط
+            activeButton.BackColor = Color.SteelBlue; 
         }
 
         public void showUserControl(UserControl userControl)
         {
             mainPanel.Controls.Clear();
-            userControl.Dock = DockStyle.Fill; // ليملأ البانل فقط، وليس الفورم كله
+            userControl.Dock = DockStyle.Fill; 
             mainPanel.Controls.Add(userControl);
 
         }

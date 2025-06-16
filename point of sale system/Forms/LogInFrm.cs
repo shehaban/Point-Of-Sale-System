@@ -1,7 +1,9 @@
-﻿using System;
+﻿using point_of_sale_system.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,14 +12,15 @@ using System.Windows.Forms;
 
 namespace point_of_sale_system
 {
-    public partial class PasswordFrm : Form
+    public partial class LogInFrm : Form
     {
-        public string EnteredPassword { get; private set; }
 
-        public PasswordFrm()
+        public LogInFrm()
         {
             InitializeComponent();
         }
+
+        
 
         private void PasswordFrm_Load(object sender, EventArgs e)
         {
@@ -26,9 +29,14 @@ namespace point_of_sale_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnteredPassword = txtPassword.Text;
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            mainFrm main = new mainFrm();
+            main.Show();
+            this.Hide();
+        }
+
+        private void CancelBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

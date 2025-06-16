@@ -1,4 +1,6 @@
-﻿using System;
+﻿using point_of_sale_system.Forms;
+using point_of_sale_system.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +12,14 @@ using System.Windows.Forms;
 
 namespace point_of_sale_system
 {
-    public partial class saleFrm : Form
+    public partial class SaleForm : UserControl
     {
-        public saleFrm()
+        public event EventHandler ReturnToMainForm;
+
+        public SaleForm()
         {
             InitializeComponent();
-        }
 
-        private void homebtn_Click(object sender, EventArgs e)
-        {
-            mainFrm mainForm = new mainFrm();
-            mainForm.Show();
-            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -29,5 +27,12 @@ namespace point_of_sale_system
             QuickList quickList = new QuickList();
             quickList.ShowDialog();
         }
+
+        private void SaleForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

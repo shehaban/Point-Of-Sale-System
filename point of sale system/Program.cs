@@ -16,7 +16,7 @@ namespace point_of_sale_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainFrm());
+            Application.Run(new LogInFrm());
         }
     }
 }

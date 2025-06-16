@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace point_of_sale_system
+namespace point_of_sale_system.Forms
 {
-    public partial class passwordMng : UserControl
+    public partial class InvoiceForm : Form
     {
-        public passwordMng()
+        public InvoiceForm()
         {
             InitializeComponent();
         }

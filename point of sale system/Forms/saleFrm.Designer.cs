@@ -35,7 +35,6 @@
             this.qnttxt = new System.Windows.Forms.TextBox();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.homebtn = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,16 +136,6 @@
             this.button17.Text = "New Invoice";
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
-            this.button16.Location = new System.Drawing.Point(564, 361);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(74, 84);
-            this.button16.TabIndex = 71;
-            this.button16.UseVisualStyleBackColor = true;
-            // 
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
@@ -179,6 +169,7 @@
             this.button13.TabIndex = 68;
             this.button13.Text = "Cash";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // dataGridView1
             // 
@@ -335,6 +326,16 @@
             this.homebtn.Text = "Home Page";
             this.homebtn.UseVisualStyleBackColor = false;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
+            this.button16.Location = new System.Drawing.Point(564, 361);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(74, 84);
+            this.button16.TabIndex = 71;
+            this.button16.UseVisualStyleBackColor = true;
             // 
             // saleFrm
             // 

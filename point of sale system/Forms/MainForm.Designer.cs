@@ -33,7 +33,6 @@
             this.exitbtn = new System.Windows.Forms.Button();
             this.btnSaleMng = new System.Windows.Forms.Button();
             this.btnSale = new System.Windows.Forms.Button();
-            this.cmboBoxUsers = new System.Windows.Forms.ComboBox();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +44,6 @@
             this.Panel.Controls.Add(this.exitbtn);
             this.Panel.Controls.Add(this.btnSaleMng);
             this.Panel.Controls.Add(this.btnSale);
-            this.Panel.Controls.Add(this.cmboBoxUsers);
             this.Panel.Location = new System.Drawing.Point(-1, 12);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(618, 742);
@@ -97,20 +95,6 @@
             this.btnSale.UseVisualStyleBackColor = false;
             this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
-            // cmboBoxUsers
-            // 
-            this.cmboBoxUsers.BackColor = System.Drawing.Color.White;
-            this.cmboBoxUsers.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmboBoxUsers.FormattingEnabled = true;
-            this.cmboBoxUsers.Items.AddRange(new object[] {
-            "Admin",
-            "Casheer"});
-            this.cmboBoxUsers.Location = new System.Drawing.Point(189, 30);
-            this.cmboBoxUsers.Name = "cmboBoxUsers";
-            this.cmboBoxUsers.Size = new System.Drawing.Size(220, 29);
-            this.cmboBoxUsers.TabIndex = 6;
-            this.cmboBoxUsers.SelectedIndexChanged += new System.EventHandler(this.cmboBoxUsers_SelectedIndexChanged);
-            // 
             // mainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -119,6 +103,7 @@
             this.Controls.Add(this.Panel);
             this.Name = "mainFrm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.mainFrm_Load);
             this.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -130,7 +115,6 @@
         private System.Windows.Forms.Panel Panel;
         private System.Windows.Forms.Button btnSaleMng;
         private System.Windows.Forms.Button btnSale;
-        private System.Windows.Forms.ComboBox cmboBoxUsers;
         private System.Windows.Forms.Button exitbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

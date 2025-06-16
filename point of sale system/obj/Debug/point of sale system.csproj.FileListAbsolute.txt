@@ -12,10 +12,11 @@ C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.AddItem.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Edit.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Inventory.resources
-C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.PasswordFrm.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.QuickList.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.SaleInfo.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.mainFrm.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.saleMngFrm.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.saleFrm.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.passwordMng.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.InvoiceForm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.LogInFrm.resources

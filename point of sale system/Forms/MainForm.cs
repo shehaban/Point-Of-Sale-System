@@ -15,8 +15,6 @@ namespace point_of_sale_system
         public mainFrm()
         {
             InitializeComponent();
-            cmboBoxUsers.SelectedIndex = 1;
-
             
         }
 
@@ -35,14 +33,14 @@ namespace point_of_sale_system
             
         }
 
-        private void cmboBoxUsers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void exitbtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mainFrm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
