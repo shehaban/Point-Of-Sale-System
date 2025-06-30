@@ -8,7 +8,7 @@ namespace point_of_sale_system.DAL
     public class DbHelper : IDisposable
     {
         protected string connectionString = "Server=DESKTOP-3P19VR9;Database=pos;Trusted_Connection=True;";
-        private SqlConnection connection;
+        protected SqlConnection connection;
 
         public DbHelper()
         {
