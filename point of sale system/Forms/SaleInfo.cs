@@ -16,5 +16,12 @@ namespace point_of_sale_system
         {
             InitializeComponent();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            mainFrm mainFrm = new mainFrm();
+            mainFrm.ShowDialog();
+            this.Hide();
+        }
     }
 }

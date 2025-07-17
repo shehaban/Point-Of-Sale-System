@@ -22,5 +22,21 @@ namespace point_of_sale_system
             Edit edit = new Edit();
             edit.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddItem add = new AddItem();
+            add.ShowDialog();
+        }
     }
 }

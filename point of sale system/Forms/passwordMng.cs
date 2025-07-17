@@ -19,5 +19,10 @@ namespace point_of_sale_system
             InitializeComponent();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

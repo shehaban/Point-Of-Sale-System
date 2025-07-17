@@ -100,6 +100,7 @@
     <Compile Include="Forms\Products.Designer.cs">
       <DependentUpon>Products.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Data\Data.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Product.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Forms\saleMngFrm.Designer.cs">
       <DependentUpon>saleMngFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="utilities\PasswordHasher.cs" />
     <EmbeddedResource Include="Forms\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>

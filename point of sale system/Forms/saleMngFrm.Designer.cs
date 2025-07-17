@@ -56,7 +56,7 @@
             this.btnSalesMng.Name = "btnSalesMng";
             this.btnSalesMng.Size = new System.Drawing.Size(184, 98);
             this.btnSalesMng.TabIndex = 8;
-            this.btnSalesMng.Text = "Sales Information";
+            this.btnSalesMng.Text = "Sales Report";
             this.btnSalesMng.UseVisualStyleBackColor = false;
             this.btnSalesMng.Click += new System.EventHandler(this.btnSalesMng_Click);
             // 
@@ -68,7 +68,7 @@
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(184, 98);
             this.btnInventory.TabIndex = 7;
-            this.btnInventory.Text = "Inventory";
+            this.btnInventory.Text = "Product Mangment";
             this.btnInventory.UseVisualStyleBackColor = false;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
@@ -81,7 +81,7 @@
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(184, 98);
             this.btnProducts.TabIndex = 6;
-            this.btnProducts.Text = "Products";
+            this.btnProducts.Text = "Inventory";
             this.btnProducts.UseVisualStyleBackColor = false;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click_1);
             // 
@@ -89,7 +89,7 @@
             // 
             this.mainPanel.Location = new System.Drawing.Point(202, 12);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(997, 697);
+            this.mainPanel.Size = new System.Drawing.Size(1059, 697);
             this.mainPanel.TabIndex = 10;
             // 
             // homebtn
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 721);
+            this.ClientSize = new System.Drawing.Size(1273, 721);
             this.Controls.Add(this.homebtn);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.mngbtn);

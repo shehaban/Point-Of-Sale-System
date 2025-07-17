@@ -52,6 +52,10 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.homebtn = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +108,7 @@
             // 
             // qnttxt
             // 
+            this.qnttxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.qnttxt.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qnttxt.Location = new System.Drawing.Point(821, 50);
             this.qnttxt.Multiline = true;
@@ -140,7 +145,7 @@
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.button15.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(564, 243);
+            this.button15.Location = new System.Drawing.Point(564, 345);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(74, 103);
             this.button15.TabIndex = 70;
@@ -151,7 +156,7 @@
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.button14.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(564, 121);
+            this.button14.Location = new System.Drawing.Point(564, 223);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(74, 103);
             this.button14.TabIndex = 69;
@@ -167,7 +172,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(167, 87);
             this.button13.TabIndex = 68;
-            this.button13.Text = "Cash";
+            this.button13.Text = "Sale";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -175,11 +180,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 121);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(548, 683);
+            this.dataGridView1.Size = new System.Drawing.Size(548, 527);
             this.dataGridView1.TabIndex = 67;
             // 
             // button11
@@ -331,11 +336,56 @@
             // 
             this.button16.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
-            this.button16.Location = new System.Drawing.Point(564, 361);
+            this.button16.Location = new System.Drawing.Point(564, 463);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(74, 84);
             this.button16.TabIndex = 71;
             this.button16.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(27, 50);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(359, 57);
+            this.textBox1.TabIndex = 80;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(402, 50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 53);
+            this.button3.TabIndex = 81;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(12, 667);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 41);
+            this.label2.TabIndex = 82;
+            this.label2.Text = "total price:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(175, 667);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 46);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "999.99";
             // 
             // saleFrm
             // 
@@ -343,6 +393,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.ClientSize = new System.Drawing.Size(1195, 733);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.homebtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -401,5 +455,9 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button homebtn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

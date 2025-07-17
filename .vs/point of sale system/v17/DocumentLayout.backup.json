@@ -3,60 +3,124 @@
   "WorkspaceRootPath": "C:\\College\\C#\\point of sale system\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\invoiceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\salefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\salefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\saleinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\saleinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\saleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\saleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\salemngfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\salemngfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\additem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\loginfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\loginfrm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\saleinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\saleinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\saledal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\saledal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\inventorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\inventorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\invoicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\dal\\invoicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\invoicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\dal\\inventorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\inventorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\utilities\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\utilities\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\loginfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\global data\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\global data\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\passwordmng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\salemngfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\salemngfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\salemngfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|c:\\college\\c#\\point of sale system\\point of sale system\\forms\\salefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\salefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\dal\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|C:\\College\\C#\\point of sale system\\point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B65AF1F0-2A7F-4718-8DE4-11B2CBB7A33D}|point of sale system\\point of sale system.csproj|solutionrelative:point of sale system\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,63 +130,233 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SaleDAL.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\SaleDAL.cs",
-              "RelativeDocumentMoniker": "point of sale system\\DAL\\SaleDAL.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\SaleDAL.cs",
-              "RelativeToolTip": "point of sale system\\DAL\\SaleDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "InvoiceForm.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\InvoiceForm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\InvoiceForm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\InvoiceForm.cs*",
+              "RelativeToolTip": "point of sale system\\Forms\\InvoiceForm.cs*",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:31:10.548Z",
+              "WhenOpened": "2025-07-17T17:04:44.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserDAL.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\UserDAL.cs",
-              "RelativeDocumentMoniker": "point of sale system\\DAL\\UserDAL.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\UserDAL.cs",
-              "RelativeToolTip": "point of sale system\\DAL\\UserDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "InvoiceForm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\InvoiceForm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\InvoiceForm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\InvoiceForm.cs [Design]*",
+              "RelativeToolTip": "point of sale system\\Forms\\InvoiceForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:30:46.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventoryDAL.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InventoryDAL.cs",
-              "RelativeDocumentMoniker": "point of sale system\\DAL\\InventoryDAL.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InventoryDAL.cs",
-              "RelativeToolTip": "point of sale system\\DAL\\InventoryDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:30:33.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-17T16:59:31.467Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InvoiceDAL.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InvoiceDAL.cs",
-              "RelativeDocumentMoniker": "point of sale system\\DAL\\InvoiceDAL.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InvoiceDAL.cs",
-              "RelativeToolTip": "point of sale system\\DAL\\InvoiceDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "saleFrm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleFrm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\saleFrm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleFrm.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\saleFrm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:30:17.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T08:34:15.26Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Edit.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Edit.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\Edit.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Edit.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\Edit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:54:22.997Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogInFrm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\LogInFrm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs [Design]*",
+              "RelativeToolTip": "point of sale system\\Forms\\LogInFrm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:32:51.485Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LogInFrm.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\LogInFrm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs*",
+              "RelativeToolTip": "point of sale system\\Forms\\LogInFrm.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAnwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:40:50.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inventory.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Inventory.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\Inventory.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Inventory.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\Inventory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:08:13.619Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "passwordMng.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\passwordMng.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\passwordMng.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:49:23.485Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T08:32:33.008Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "passwordMng.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\passwordMng.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\passwordMng.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAvwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:38:38.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SaleInfo.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleInfo.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\SaleInfo.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleInfo.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\SaleInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:25:13.211Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddItem.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\AddItem.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\AddItem.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\AddItem.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\AddItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:43:38.119Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SaleForm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleForm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\SaleForm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleForm.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\SaleForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T16:01:52.821Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "saleMngFrm.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\saleMngFrm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\saleMngFrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T14:16:28.444Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Products.cs [Design]",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Products.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\Products.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Products.cs [Design]",
+              "RelativeToolTip": "point of sale system\\Forms\\Products.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:19:21.855Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Edit.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\Edit.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Edit.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\Edit.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:56:11.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddItem.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\AddItem.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\AddItem.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\AddItem.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\AddItem.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T15:56:32.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LogInFrm.Designer.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.Designer.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\LogInFrm.Designer.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.Designer.cs*",
+              "RelativeToolTip": "point of sale system\\Forms\\LogInFrm.Designer.cs*",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAcwLkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T14:55:11.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ProductDAL.cs",
               "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\ProductDAL.cs",
               "RelativeDocumentMoniker": "point of sale system\\DAL\\ProductDAL.cs",
@@ -135,44 +369,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LogInFrm.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\LogInFrm.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs",
-              "RelativeToolTip": "point of sale system\\Forms\\LogInFrm.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAnwCYAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "SaleInfo.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleInfo.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\SaleInfo.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\SaleInfo.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\SaleInfo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwBcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:40:50.936Z",
+              "WhenOpened": "2025-07-17T15:35:12.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogInFrm.cs [Design]",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\LogInFrm.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\LogInFrm.cs [Design]",
-              "RelativeToolTip": "point of sale system\\Forms\\LogInFrm.cs [Design]",
+              "DocumentIndex": 20,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Inventory.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\Inventory.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\Inventory.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\Inventory.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA4wCYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:32:51.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-17T15:12:14.405Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\MainForm.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\MainForm.cs [Design]",
-              "RelativeToolTip": "point of sale system\\Forms\\MainForm.cs [Design]",
+              "DocumentIndex": 22,
+              "Title": "InvoiceDAL.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InvoiceDAL.cs",
+              "RelativeDocumentMoniker": "point of sale system\\DAL\\InvoiceDAL.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InvoiceDAL.cs",
+              "RelativeToolTip": "point of sale system\\DAL\\InvoiceDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:32:33.008Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-16T10:30:17.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
+              "Title": "SaleDAL.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\SaleDAL.cs",
+              "RelativeDocumentMoniker": "point of sale system\\DAL\\SaleDAL.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\SaleDAL.cs",
+              "RelativeToolTip": "point of sale system\\DAL\\SaleDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T10:31:10.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Global Data\\Data.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Global Data\\Data.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Global Data\\Data.cs",
+              "RelativeToolTip": "point of sale system\\Global Data\\Data.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T11:41:19.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\utilities\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "point of sale system\\utilities\\PasswordHasher.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\utilities\\PasswordHasher.cs",
+              "RelativeToolTip": "point of sale system\\utilities\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T11:41:19.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "saleMngFrm.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs",
+              "RelativeDocumentMoniker": "point of sale system\\Forms\\saleMngFrm.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs",
+              "RelativeToolTip": "point of sale system\\Forms\\saleMngFrm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T09:52:32.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InventoryDAL.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InventoryDAL.cs",
+              "RelativeDocumentMoniker": "point of sale system\\DAL\\InventoryDAL.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\InventoryDAL.cs",
+              "RelativeToolTip": "point of sale system\\DAL\\InventoryDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T10:30:33.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserDAL.cs",
+              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\UserDAL.cs",
+              "RelativeDocumentMoniker": "point of sale system\\DAL\\UserDAL.cs",
+              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\UserDAL.cs",
+              "RelativeToolTip": "point of sale system\\DAL\\UserDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T10:30:46.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "point of sale system\\Forms\\MainForm.cs",
@@ -185,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 28,
               "Title": "DBHelper.cs",
               "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\DAL\\DBHelper.cs",
               "RelativeDocumentMoniker": "point of sale system\\DAL\\DBHelper.cs",
@@ -193,58 +502,7 @@
               "RelativeToolTip": "point of sale system\\DAL\\DBHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:59:29.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "passwordMng.cs [Design]",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\passwordMng.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs [Design]",
-              "RelativeToolTip": "point of sale system\\Forms\\passwordMng.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:49:23.485Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "passwordMng.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\passwordMng.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\passwordMng.cs",
-              "RelativeToolTip": "point of sale system\\Forms\\passwordMng.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:38:38.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "saleMngFrm.cs",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\saleMngFrm.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleMngFrm.cs",
-              "RelativeToolTip": "point of sale system\\Forms\\saleMngFrm.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA2wD8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:52:32.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "saleFrm.cs [Design]",
-              "DocumentMoniker": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleFrm.cs",
-              "RelativeDocumentMoniker": "point of sale system\\Forms\\saleFrm.cs",
-              "ToolTip": "C:\\College\\C#\\point of sale system\\point of sale system\\Forms\\saleFrm.cs [Design]",
-              "RelativeToolTip": "point of sale system\\Forms\\saleFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:34:15.26Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-16T08:59:29.21Z"
             }
           ]
         }

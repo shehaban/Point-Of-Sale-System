@@ -20,23 +20,18 @@ namespace point_of_sale_system
             InitializeComponent();
         }
 
-        
 
-        private void PasswordFrm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e)
         {
             mainFrm main = new mainFrm();
             main.Show();
             this.Hide();
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }

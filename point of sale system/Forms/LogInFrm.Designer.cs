@@ -28,234 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CancelBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.cmbUsername = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CancelBtn
+            // pictureBox1
             // 
-            this.CancelBtn.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelBtn.Location = new System.Drawing.Point(103, 680);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(219, 98);
-            this.CancelBtn.TabIndex = 7;
-            this.CancelBtn.Text = "Exit";
-            this.CancelBtn.UseVisualStyleBackColor = true;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(328, 680);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 98);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(-6, -11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(453, 578);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 104);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(501, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 46);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Enter Password";
+            this.label1.Size = new System.Drawing.Size(220, 45);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "POS SYSTEM";
             // 
-            // txtPassword
+            // button1
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(103, 178);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(441, 54);
-            this.txtPassword.TabIndex = 4;
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(499, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(380, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "LOGIN";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // cmbUsername
+            // textBox3
             // 
-            this.cmbUsername.BackColor = System.Drawing.Color.White;
-            this.cmbUsername.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUsername.FormattingEnabled = true;
-            this.cmbUsername.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier"});
-            this.cmbUsername.Location = new System.Drawing.Point(253, 45);
-            this.cmbUsername.Name = "cmbUsername";
-            this.cmbUsername.Size = new System.Drawing.Size(220, 29);
-            this.cmbUsername.TabIndex = 8;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(499, 199);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(380, 38);
+            this.textBox3.TabIndex = 5;
             // 
-            // button2
+            // textBox1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.button2.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(103, 580);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 96);
-            this.button2.TabIndex = 88;
-            this.button2.Text = "C";
-            this.button2.UseVisualStyleBackColor = false;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(499, 309);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(380, 38);
+            this.textBox1.TabIndex = 2;
             // 
-            // btn0
+            // label2
             // 
-            this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn0.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn0.Location = new System.Drawing.Point(317, 580);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(227, 94);
-            this.btn0.TabIndex = 87;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label2.Location = new System.Drawing.Point(505, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Username:";
             // 
-            // btn1
+            // label3
             // 
-            this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn1.Location = new System.Drawing.Point(103, 466);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(130, 108);
-            this.btn1.TabIndex = 86;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Location = new System.Drawing.Point(505, 269);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Password:";
             // 
-            // btn2
+            // label4
             // 
-            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn2.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn2.Location = new System.Drawing.Point(253, 466);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(130, 108);
-            this.btn2.TabIndex = 85;
-            this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = false;
+            this.label4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(34, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(343, 205);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "POS ";
             // 
-            // btn3
+            // label5
             // 
-            this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn3.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn3.Location = new System.Drawing.Point(414, 466);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(130, 108);
-            this.btn3.TabIndex = 84;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = false;
+            this.label5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(44, 187);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(353, 225);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "SYS";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // btn4
+            // label6
             // 
-            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn4.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn4.Location = new System.Drawing.Point(103, 352);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(130, 108);
-            this.btn4.TabIndex = 83;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = false;
+            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(34, 370);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(353, 184);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "TEM";
             // 
-            // btn5
+            // label7
             // 
-            this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn5.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn5.Location = new System.Drawing.Point(253, 352);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(130, 108);
-            this.btn5.TabIndex = 82;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = false;
-            // 
-            // btn6
-            // 
-            this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn6.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn6.Location = new System.Drawing.Point(414, 352);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(130, 108);
-            this.btn6.TabIndex = 81;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = false;
-            // 
-            // btn7
-            // 
-            this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn7.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn7.Location = new System.Drawing.Point(103, 238);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(130, 108);
-            this.btn7.TabIndex = 80;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = false;
-            // 
-            // btn8
-            // 
-            this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn8.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn8.Location = new System.Drawing.Point(262, 238);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(130, 108);
-            this.btn8.TabIndex = 79;
-            this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = false;
-            // 
-            // btn9
-            // 
-            this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btn9.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn9.Location = new System.Drawing.Point(414, 238);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(130, 108);
-            this.btn9.TabIndex = 78;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = false;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label7.Location = new System.Drawing.Point(476, 512);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 23);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "version 1.0.0";
             // 
             // LogInFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(656, 790);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn0);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.cmbUsername);
-            this.Controls.Add(this.CancelBtn);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(972, 563);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "LogInFrm";
-            this.Text = "PasswordFrm";
-            this.Load += new System.EventHandler(this.PasswordFrm_Load);
+            this.Text = "POS System - LOGIN";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,21 +193,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button CancelBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.ComboBox cmbUsername;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn0;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
