@@ -20,3 +20,6 @@ C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.passwordMng.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.InvoiceForm.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.LogInFrm.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.AddUser.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.DeleteUser.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.EditUser.resources

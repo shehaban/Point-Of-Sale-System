@@ -13,12 +13,15 @@ namespace point_of_sale_system
     public partial class saleMngFrm : Form
     {
         private List<Button> navButtons;
-        public saleMngFrm()
+        private string currentUserRole; // Add this field
+        public saleMngFrm(string role)
         {
             InitializeComponent();
 
             navButtons = new List<Button>() { btnProducts, btnInventory, btnSalesMng, mngbtn, homebtn };
-            
+
+            currentUserRole = role; // Store the role
+
             btnProducts.Click += btnProducts_Click;
         }
 
@@ -61,7 +64,7 @@ namespace point_of_sale_system
 
         private void mngbtn_Click(object sender, EventArgs e)
         {
-            showUserControl(new passwordMng());
+            showUserControl(new passwordMng(currentUserRole));
             SetActiveButton(mngbtn);
         }
 

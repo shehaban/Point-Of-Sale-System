@@ -1,27 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace point_of_sale_system.utilities
+namespace point_of_sale_system.Utilities
 {
-    internal class PasswordHasher
+    public static class PasswordHasher
     {
         public static string HashPassword(string password)
         {
-            using (SHA256 sha = SHA256.Create())
+            using (SHA256 sha256 = SHA256.Create())
             {
-                byte[] bytes = Encoding.UTF8.GetBytes(password);
-                byte[] hash = sha.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
+                byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+                byte[] hashedBytes = sha256.ComputeHash(passwordBytes);
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < hashedBytes.Length; i++)
+                {
+                    builder.Append(hashedBytes[i].ToString("x2"));
+                }
+                return builder.ToString();
             }
         }
 
-        public static bool Verify(string enteredPassword, string storedHash)
+        public static bool VerifyPassword(string inputPassword, string storedHash)
         {
-            return HashPassword(enteredPassword) == storedHash;
+            string hashedInput = HashPassword(inputPassword);
+            return hashedInput == storedHash;
         }
     }
 }

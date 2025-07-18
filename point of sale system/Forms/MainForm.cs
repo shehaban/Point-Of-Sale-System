@@ -1,4 +1,5 @@
-﻿using System;
+﻿using point_of_sale_system.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,23 @@ namespace point_of_sale_system
 {
     public partial class mainFrm : Form
     {
+
+        private string userRole;
         public mainFrm()
         {
             InitializeComponent();
+            wlcmlbl.Text = UserSession.CurrentUsername.ToString();
             
         }
+
+        public mainFrm(string role)
+        {
+            InitializeComponent();
+            userRole = role;
+            wlcmlbl.Text = UserSession.CurrentUsername.ToString();
+        }
+
+
 
         private void btnSale_Click(object sender, EventArgs e)
         {
@@ -27,7 +40,7 @@ namespace point_of_sale_system
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            saleMngFrm saleMng = new saleMngFrm();
+            saleMngFrm saleMng = new saleMngFrm(userRole);
             saleMng.Show();
             this.Hide();
             
@@ -41,6 +54,18 @@ namespace point_of_sale_system
         private void mainFrm_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LogInFrm login = new LogInFrm();
+            login.Show();
+            this.Close();
+        }
+
+        private void Panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -12,5 +12,9 @@ namespace point_of_sale_system.Models
         public string Username { get; set; }
         public string PasswordHash { get; set; }
         public string Role { get; set; }
+        public int FailedAttempts { get; set; }
+        public DateTime? LastAttempt { get; set; }
+        public bool IsLocked { get; set; }
+
     }
 }
