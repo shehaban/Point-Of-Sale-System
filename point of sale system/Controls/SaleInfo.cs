@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace point_of_sale_system
 {
-    public partial class Products : UserControl
+    public partial class SaleInfo : UserControl
     {
-        public Products()
+        public SaleInfo()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-            AddItem add = new AddItem();
-            add.ShowDialog();
+            mainFrm mainFrm = new mainFrm();
+            mainFrm.ShowDialog();
+            this.Hide();
         }
     }
 }

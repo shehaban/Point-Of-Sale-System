@@ -52,34 +52,34 @@
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DAL\SaleDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
-    <Compile Include="Forms\AddItem.cs">
+    <Compile Include="Controls\AddItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddItem.Designer.cs">
+    <Compile Include="Controls\AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddUser.cs">
+    <Compile Include="Controls\AddUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AddUser.Designer.cs">
+    <Compile Include="Controls\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeleteUser.cs">
+    <Compile Include="Controls\DeleteUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\DeleteUser.Designer.cs">
+    <Compile Include="Controls\DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Edit.cs">
+    <Compile Include="Controls\Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Edit.Designer.cs">
+    <Compile Include="Controls\Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditUser.cs">
+    <Compile Include="Controls\EditUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\EditUser.Designer.cs">
+    <Compile Include="Controls\EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
@@ -88,11 +88,11 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Inventory.cs">
+    <Compile Include="Controls\ProductMng.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <Compile Include="Controls\ProductMng.Designer.cs">
+      <DependentUpon>ProductMng.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InvoiceForm.cs">
       <SubType>Form</SubType>
@@ -106,17 +106,17 @@
     <Compile Include="Forms\LogInFrm.Designer.cs">
       <DependentUpon>LogInFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\passwordMng.cs">
+    <Compile Include="Controls\UserMng.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\passwordMng.Designer.cs">
-      <DependentUpon>passwordMng.cs</DependentUpon>
+    <Compile Include="Controls\UserMng.Designer.cs">
+      <DependentUpon>UserMng.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Products.cs">
+    <Compile Include="Controls\Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Products.Designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
+    <Compile Include="Controls\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Data\Data.cs" />
     <Compile Include="Models\Inventory.cs" />
@@ -134,22 +134,16 @@
     <Compile Include="Forms\QuickList.Designer.cs">
       <DependentUpon>QuickList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SaleForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\SaleForm.Designer.cs">
-      <DependentUpon>SaleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\saleFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\saleFrm.Designer.cs">
       <DependentUpon>saleFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SaleInfo.cs">
+    <Compile Include="Controls\SaleInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\SaleInfo.Designer.cs">
+    <Compile Include="Controls\SaleInfo.Designer.cs">
       <DependentUpon>SaleInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\saleMngFrm.cs">
@@ -159,26 +153,26 @@
       <DependentUpon>saleMngFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="utilities\PasswordHasher.cs" />
-    <EmbeddedResource Include="Forms\AddItem.resx">
+    <EmbeddedResource Include="Controls\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddUser.resx">
+    <EmbeddedResource Include="Controls\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeleteUser.resx">
+    <EmbeddedResource Include="Controls\DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Edit.resx">
+    <EmbeddedResource Include="Controls\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditUser.resx">
+    <EmbeddedResource Include="Controls\EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ProductMng.resx">
+      <DependentUpon>ProductMng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
@@ -186,11 +180,11 @@
     <EmbeddedResource Include="Forms\LogInFrm.resx">
       <DependentUpon>LogInFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\passwordMng.resx">
-      <DependentUpon>passwordMng.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\UserMng.resx">
+      <DependentUpon>UserMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,13 +199,10 @@
     <EmbeddedResource Include="Forms\QuickList.resx">
       <DependentUpon>QuickList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SaleForm.resx">
-      <DependentUpon>SaleForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\saleFrm.resx">
       <DependentUpon>saleFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SaleInfo.resx">
+    <EmbeddedResource Include="Controls\SaleInfo.resx">
       <DependentUpon>SaleInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\saleMngFrm.resx">

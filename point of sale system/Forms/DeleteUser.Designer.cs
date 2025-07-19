@@ -46,7 +46,7 @@
             this.btnAdd.TabIndex = 85;
             this.btnAdd.Text = "Delete";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtPassword
             // 

@@ -15,12 +15,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace point_of_sale_system
 {
-    public partial class passwordMng : UserControl
+    public partial class UserMng : UserControl
     {
 
         private string currentUserRole;
 
-        public passwordMng(string userRole)
+        public UserMng(string userRole)
         {
             InitializeComponent();
             currentUserRole = userRole;
@@ -32,7 +32,7 @@ namespace point_of_sale_system
         private void InitializeRoleBasedAccess()
         {
             // Disable all controls if not admin
-            if (!currentUserRole.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            if (!currentUserRole.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
                 button6.Enabled = false;
                 button5.Enabled = false;  // Password field

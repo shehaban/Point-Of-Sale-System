@@ -8,8 +8,9 @@ namespace point_of_sale_system.Models
 {
     internal class Inventory
     {
-        public int InventoryId { get; set; }
-        public int ProductId { get; set; }
-        public int ReorderLevel { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int quantity { get; set; }
+        public decimal price { get; set; }
     }
 }

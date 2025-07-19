@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtPurchasePrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.authorTextBox = new System.Windows.Forms.TextBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.txtSellPrice = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -54,23 +54,23 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Purchase Price";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(237, 371);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 34);
-            this.textBox2.TabIndex = 40;
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantity.Location = new System.Drawing.Point(237, 371);
+            this.txtQuantity.Multiline = true;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(380, 34);
+            this.txtQuantity.TabIndex = 40;
             // 
-            // textBox1
+            // txtPurchasePrice
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(237, 306);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 34);
-            this.textBox1.TabIndex = 39;
+            this.txtPurchasePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPurchasePrice.Location = new System.Drawing.Point(237, 306);
+            this.txtPurchasePrice.Multiline = true;
+            this.txtPurchasePrice.Name = "txtPurchasePrice";
+            this.txtPurchasePrice.Size = new System.Drawing.Size(380, 34);
+            this.txtPurchasePrice.TabIndex = 39;
             // 
             // label4
             // 
@@ -102,23 +102,23 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Name";
             // 
-            // authorTextBox
+            // txtSellPrice
             // 
-            this.authorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.authorTextBox.Location = new System.Drawing.Point(237, 240);
-            this.authorTextBox.Multiline = true;
-            this.authorTextBox.Name = "authorTextBox";
-            this.authorTextBox.Size = new System.Drawing.Size(380, 34);
-            this.authorTextBox.TabIndex = 34;
+            this.txtSellPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSellPrice.Location = new System.Drawing.Point(237, 240);
+            this.txtSellPrice.Multiline = true;
+            this.txtSellPrice.Name = "txtSellPrice";
+            this.txtSellPrice.Size = new System.Drawing.Size(380, 34);
+            this.txtSellPrice.TabIndex = 34;
             // 
-            // titleTextBox
+            // txtCategory
             // 
-            this.titleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.titleTextBox.Location = new System.Drawing.Point(237, 177);
-            this.titleTextBox.Multiline = true;
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(380, 34);
-            this.titleTextBox.TabIndex = 33;
+            this.txtCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategory.Location = new System.Drawing.Point(237, 177);
+            this.txtCategory.Multiline = true;
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(380, 34);
+            this.txtCategory.TabIndex = 33;
             // 
             // btnAdd
             // 
@@ -131,6 +131,7 @@
             this.btnAdd.TabIndex = 35;
             this.btnAdd.Text = "Save";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button1
             // 
@@ -143,7 +144,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label5
             // 
@@ -155,14 +156,14 @@
             this.label5.TabIndex = 43;
             this.label5.Text = "Quantity";
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(237, 117);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(380, 34);
-            this.textBox3.TabIndex = 44;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(237, 117);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(380, 34);
+            this.txtName.TabIndex = 44;
             // 
             // label6
             // 
@@ -192,17 +193,17 @@
             this.ClientSize = new System.Drawing.Size(653, 541);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.txtPurchasePrice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.authorTextBox);
-            this.Controls.Add(this.titleTextBox);
+            this.Controls.Add(this.txtSellPrice);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.btnAdd);
             this.Name = "AddItem";
             this.Text = "AddItem";
@@ -214,17 +215,17 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtPurchasePrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox authorTextBox;
-        private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.TextBox txtSellPrice;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
     }

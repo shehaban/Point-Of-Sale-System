@@ -46,13 +46,13 @@ namespace point_of_sale_system
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            showUserControl(new Products());
+            showUserControl(new Inventory());
             SetActiveButton(btnProducts);
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            showUserControl(new Inventory());
+            showUserControl(new ProductMng());
             SetActiveButton(btnInventory);
         }
 
@@ -64,7 +64,7 @@ namespace point_of_sale_system
 
         private void mngbtn_Click(object sender, EventArgs e)
         {
-            showUserControl(new passwordMng(currentUserRole));
+            showUserControl(new UserMng(currentUserRole));
             SetActiveButton(mngbtn);
         }
 
@@ -77,7 +77,7 @@ namespace point_of_sale_system
 
         private void btnProducts_Click_1(object sender, EventArgs e)
         {
-            showUserControl(new Products());
+            showUserControl(new Inventory());
             SetActiveButton(btnProducts);
         }
     }

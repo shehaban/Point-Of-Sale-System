@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.wlcmlbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exitbtn = new System.Windows.Forms.Button();
             this.btnSaleMng = new System.Windows.Forms.Button();
             this.btnSale = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.wlcmlbl = new System.Windows.Forms.Label();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,11 +57,24 @@
             this.Panel.TabIndex = 0;
             this.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Paint);
             // 
+            // wlcmlbl
+            // 
+            this.wlcmlbl.AutoSize = true;
+            this.wlcmlbl.BackColor = System.Drawing.Color.Transparent;
+            this.wlcmlbl.Font = new System.Drawing.Font("Segoe UI Semilight", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wlcmlbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.wlcmlbl.Location = new System.Drawing.Point(228, 41);
+            this.wlcmlbl.Name = "wlcmlbl";
+            this.wlcmlbl.Size = new System.Drawing.Size(0, 59);
+            this.wlcmlbl.TabIndex = 14;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkRed;
             this.button1.Location = new System.Drawing.Point(325, 681);
             this.button1.Name = "button1";
@@ -70,6 +83,17 @@
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(49, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 59);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Welcome  ";
             // 
             // pictureBox1
             // 
@@ -85,7 +109,9 @@
             // 
             this.exitbtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.exitbtn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitbtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitbtn.ForeColor = System.Drawing.Color.DarkRed;
             this.exitbtn.Location = new System.Drawing.Point(42, 681);
             this.exitbtn.Name = "exitbtn";
@@ -99,11 +125,12 @@
             // 
             this.btnSaleMng.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSaleMng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSaleMng.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleMng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleMng.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaleMng.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSaleMng.Location = new System.Drawing.Point(353, 146);
+            this.btnSaleMng.Location = new System.Drawing.Point(325, 146);
             this.btnSaleMng.Name = "btnSaleMng";
-            this.btnSaleMng.Size = new System.Drawing.Size(228, 117);
+            this.btnSaleMng.Size = new System.Drawing.Size(256, 117);
             this.btnSaleMng.TabIndex = 8;
             this.btnSaleMng.Text = "Sales Mangment";
             this.btnSaleMng.UseVisualStyleBackColor = false;
@@ -113,37 +140,16 @@
             // 
             this.btnSale.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSale.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSale.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSale.Location = new System.Drawing.Point(42, 146);
             this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(228, 117);
+            this.btnSale.Size = new System.Drawing.Size(256, 117);
             this.btnSale.TabIndex = 7;
             this.btnSale.Text = "Sale Form";
             this.btnSale.UseVisualStyleBackColor = false;
             this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(49, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 59);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Welcome  ";
-            // 
-            // wlcmlbl
-            // 
-            this.wlcmlbl.AutoSize = true;
-            this.wlcmlbl.BackColor = System.Drawing.Color.Transparent;
-            this.wlcmlbl.Font = new System.Drawing.Font("Segoe UI Semilight", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wlcmlbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.wlcmlbl.Location = new System.Drawing.Point(228, 41);
-            this.wlcmlbl.Name = "wlcmlbl";
-            this.wlcmlbl.Size = new System.Drawing.Size(0, 59);
-            this.wlcmlbl.TabIndex = 14;
             // 
             // mainFrm
             // 
@@ -152,7 +158,7 @@
             this.ClientSize = new System.Drawing.Size(619, 757);
             this.Controls.Add(this.Panel);
             this.Name = "mainFrm";
-            this.Text = "Form1";
+            this.Text = "Main Form";
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();

@@ -17,32 +17,36 @@ namespace point_of_sale_system.DAL
 
         public bool AddUser(User user)
         {
-            string query = @"INSERT INTO Users (username, password, role, FailedAttempts) 
-                            VALUES (@Username, @Password, @Role, 0)";
-
+            // Check if a non-deleted user with the same username exists
+            string checkQuery = "SELECT COUNT(*) FROM Users WHERE username = @Username AND IsDeleted = 0";
             try
             {
                 OpenConnection();
 
-                using (SqlCommand cmd = new SqlCommand(query, connection))
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@Username", user.Username);
+                    int exists = (int)checkCmd.ExecuteScalar();
+                    if (exists > 0)
+                    {
+                        throw new Exception("Username already exists.");
+                    }
+                }
+
+                string insertQuery = @"INSERT INTO Users (username, password, role, FailedAttempts, IsDeleted) 
+                               VALUES (@Username, @Password, @Role, 0, 0)";
+                using (SqlCommand cmd = new SqlCommand(insertQuery, connection))
                 {
                     cmd.Parameters.AddWithValue("@Username", user.Username);
                     cmd.Parameters.AddWithValue("@Password", user.PasswordHash);
                     cmd.Parameters.AddWithValue("@Role", user.Role);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    return rowsAffected > 0;
+                    return cmd.ExecuteNonQuery() > 0;
                 }
-            }
-            catch (SqlException ex) when (ex.Number == 2627) // Primary key violation
-            {
-                Debug.WriteLine($"User already exists: {ex.Message}");
-                throw new Exception("Username already exists. Please choose a different username.", ex);
             }
             catch (SqlException ex)
             {
                 Debug.WriteLine($"Database error in AddUser: {ex.Message}");
-                throw new Exception("Failed to create user due to a database error.", ex);
+                throw new Exception("Failed to add user due to database error.", ex);
             }
             finally
             {
@@ -50,12 +54,13 @@ namespace point_of_sale_system.DAL
             }
         }
 
+
         public User GetUserByUsername(string username)
         {
             User user = null;
             string query = @"SELECT id as UserId, username, password as PasswordHash, 
-                    role, FailedAttempts, LastAttempt, is_locked 
-                    FROM Users WHERE username = @Username";
+            role, FailedAttempts, LastAttempt, is_locked, IsDeleted
+            FROM Users WHERE username = @Username AND IsDeleted = 0"; // Add IsDeleted check
 
             try
             {
@@ -210,7 +215,8 @@ namespace point_of_sale_system.DAL
                 {
                     try
                     {
-                        string query = "DELETE FROM Users WHERE Username = @Username";
+                        // Change from DELETE to UPDATE with soft delete
+                        string query = "UPDATE Users SET IsDeleted = 1 WHERE Username = @Username";
                         using (SqlCommand cmd = new SqlCommand(query, connection, transaction))
                         {
                             cmd.Parameters.AddWithValue("@Username", username);
@@ -235,11 +241,10 @@ namespace point_of_sale_system.DAL
         public DataTable GetAllUsers()
         {
             DataTable dt = new DataTable();
-
             try
             {
                 OpenConnection();
-                string query = "SELECT Id, Username, Role FROM Users";
+                string query = "SELECT Id, Username, Role FROM Users WHERE IsDeleted = 0"; // Only non-deleted users
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -252,7 +257,6 @@ namespace point_of_sale_system.DAL
             {
                 CloseConnection();
             }
-
             return dt;
         }
 
@@ -262,10 +266,10 @@ namespace point_of_sale_system.DAL
             {
                 OpenConnection();
                 string query = @"UPDATE Users SET 
-                        Username = @NewUsername,
-                        Password = CASE WHEN @NewPasswordHash IS NULL THEN Password ELSE @NewPasswordHash END,
-                        Role = @Role
-                        WHERE Username = @OriginalUsername";
+                         Username = @NewUsername,
+                         Password = CASE WHEN @NewPasswordHash IS NULL THEN Password ELSE @NewPasswordHash END,
+                         Role = @Role
+                         WHERE Username = @OriginalUsername AND IsDeleted = 0";
 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
@@ -286,6 +290,40 @@ namespace point_of_sale_system.DAL
                 CloseConnection();
             }
         }
+
+
+        public bool IsUsernameAvailable(string username, string excludeUsername = null)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND IsDeleted = 0";
+
+                if (!string.IsNullOrEmpty(excludeUsername))
+                {
+                    query += " AND Username != @ExcludeUsername";
+                }
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    if (!string.IsNullOrEmpty(excludeUsername))
+                    {
+                        cmd.Parameters.AddWithValue("@ExcludeUsername", excludeUsername);
+                    }
+
+                    int count = (int)cmd.ExecuteScalar();
+                    return count == 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+
 
         public void Dispose()
         {

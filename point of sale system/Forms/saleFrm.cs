@@ -1,12 +1,5 @@
 ﻿using point_of_sale_system.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace point_of_sale_system
@@ -18,6 +11,16 @@ namespace point_of_sale_system
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            // Set form to full screen without changing any other properties
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        // Keep all your existing methods exactly as they are
         private void homebtn_Click(object sender, EventArgs e)
         {
             mainFrm mainForm = new mainFrm();

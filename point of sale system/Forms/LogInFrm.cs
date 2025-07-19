@@ -11,6 +11,7 @@ namespace point_of_sale_system
         public LogInFrm()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '●';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -30,19 +31,14 @@ namespace point_of_sale_system
                 return;
             }
 
-            UserDAL userDal = new UserDAL();  
+            UserDAL userDal = new UserDAL();
             User user = userDal.GetUserByUsername(username);
             if (user == null)
             {
-                MessageBox.Show("DEBUG: User not found. Check:\n" +
-                              "- Username exists in database\n" +
-                              "- Database connection works");
+                MessageBox.Show("Invalid username or password", "Login Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Debug: Show actual hash comparison
-            //string inputHash = PasswordHasher.HashPassword(password);
-            //MessageBox.Show($"Debug:\nStored: {user.PasswordHash}\nGenerated: {inputHash}");
 
             // Verify password
             if (!PasswordHasher.VerifyPassword(password, user.PasswordHash))
@@ -55,7 +51,8 @@ namespace point_of_sale_system
                     $"{remainingAttempts} attempt(s) remaining" :
                     "Account will be locked";
 
-                MessageBox.Show($"Invalid password. {warning}", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Invalid password. {warning}", "Login Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -65,36 +62,32 @@ namespace point_of_sale_system
             UserSession.CurrentUserRole = user.Role;
             UserSession.CurrentUsername = username;
 
-            // Redirect based on role (only admin or cashier)
-            if (user.Role.Equals("admin", StringComparison.OrdinalIgnoreCase))
-            {
-                new mainFrm(UserSession.CurrentUserRole).Show();
-                this.Hide();
-            }
-            else if (user.Role.Equals("cashier", StringComparison.OrdinalIgnoreCase))
-            {
-                new mainFrm(UserSession.CurrentUserRole).Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid role in database");
-            }
-        }
-
-        private string GetLockMessage(int attempts, TimeSpan timeSinceLast)
-        {
-            if (attempts >= UserDAL.MaxAttemptsLevel3 && timeSinceLast.TotalHours < 24)
-                return "Account locked for 24 hours due to multiple failed attempts.";
-            else if (attempts >= UserDAL.MaxAttemptsLevel2 && timeSinceLast.TotalMinutes < 5)
-                return "Account locked for 5 minutes due to multiple failed attempts.";
-            else
-                return "Account locked for 1 minute due to multiple failed attempts.";
+            // Redirect based on role
+            new mainFrm(UserSession.CurrentUserRole).Show();
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            // Toggle password visibility
+            if (checkBoxShowPassword.Checked)
+            {
+                // Show password
+                txtPassword.PasswordChar = '\0'; // Null character shows actual text
+            }
+            else
+            {
+                // Hide password
+                txtPassword.PasswordChar = '●'; // Or use '*'
+            }
+
+            // Move cursor to end of text to see the change
+            txtPassword.SelectionStart = txtPassword.TextLength;
         }
     }
 }

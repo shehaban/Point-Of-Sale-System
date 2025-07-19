@@ -1,6 +1,6 @@
 ﻿namespace point_of_sale_system
 {
-    partial class passwordMng
+    partial class UserMng
     {
         /// <summary> 
         /// Required designer variable.
@@ -122,7 +122,7 @@
             this.label1.Text = "you can here Add or Edit or Delete user from the system by using the tabs in the " +
     "upper of form";
             // 
-            // passwordMng
+            // UserMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,8 +133,8 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Name = "passwordMng";
-            this.Size = new System.Drawing.Size(843, 608);
+            this.Name = "UserMng";
+            this.Size = new System.Drawing.Size(1016, 609);
             this.thePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

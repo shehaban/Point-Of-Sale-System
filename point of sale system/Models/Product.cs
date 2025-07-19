@@ -8,11 +8,12 @@ namespace point_of_sale_system.Models
 {
     internal class Product
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public decimal UnitPrice { get; set; }
-        public decimal PurchasePrice { get; set; }
-        public int Quantity { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string category { get; set; }
+        public decimal unit_price { get; set; }
+        public decimal purchase_price { get; set; }
+        public int quantity { get; set; }
+        public bool IsDeleted { get; set; } // Add this property
     }
 }

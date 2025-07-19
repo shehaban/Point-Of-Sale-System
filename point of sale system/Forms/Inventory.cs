@@ -1,42 +1,118 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using point_of_sale_system.DAL;
+using point_of_sale_system.Models;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace point_of_sale_system
 {
     public partial class Inventory : UserControl
     {
+        private readonly InventoryDAL inventoryDAL = new InventoryDAL();
+
         public Inventory()
         {
             InitializeComponent();
+            LoadInventory();
+            SetupDataGridView();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SetupDataGridView()
         {
-            Edit edit = new Edit();
-            edit.ShowDialog();
+            // Font and sizing
+            dataGridViewInventory.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+            dataGridViewInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            dataGridViewInventory.RowTemplate.Height = 35;
+
+            // Column behavior
+            dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewInventory.AllowUserToAddRows = false;
+
+            // Visual improvements
+            dataGridViewInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridViewInventory.EnableHeadersVisualStyles = false;
+            dataGridViewInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            dataGridViewInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            // Configure columns
+            dataGridViewInventory.AutoGenerateColumns = false;
+            dataGridViewInventory.Columns.Clear();
+
+            // Add columns (same as ProductMng but with quantity visible)
+            dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "id",
+                HeaderText = "ID",
+                DataPropertyName = "id",
+                Visible = false // Hide ID like in ProductMng
+            });
+
+            dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "name",
+                HeaderText = "Name",
+                DataPropertyName = "name",
+                Width = 200
+            });
+
+            dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "category",
+                HeaderText = "Category",
+                DataPropertyName = "category",
+                Width = 150
+            });
+
+            dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "unit_price",
+                HeaderText = "Unit Price",
+                DataPropertyName = "unit_price",
+                Width = 100,
+                DefaultCellStyle = new DataGridViewCellStyle() { Format = "C2" }
+            });
+
+            dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "quantity",
+                HeaderText = "Quantity",
+                DataPropertyName = "quantity",
+                Width = 80
+            });
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadInventory()
         {
-
+            dataGridViewInventory.DataSource = inventoryDAL.GetAllProducts();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            LoadInventory();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnLowStock_Click(object sender, EventArgs e)
         {
-            AddItem add = new AddItem();
-            add.ShowDialog();
+            dataGridViewInventory.DataSource = inventoryDAL.GetLowStock();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            dataGridViewInventory.DataSource = inventoryDAL.SearchProducts(searchTerm);
+            txtSearch.Text = ""; // Clear search box after search like ProductMng
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSearch_Click(sender, e);
+            }
+        }
+
+
+        
     }
 }

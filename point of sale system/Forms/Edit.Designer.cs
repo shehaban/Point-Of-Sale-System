@@ -30,18 +30,18 @@
         {
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtPurchasePrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.authorTextBox = new System.Windows.Forms.TextBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtSellPrice = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -65,14 +65,14 @@
             this.label6.TabIndex = 59;
             this.label6.Text = "label6";
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(240, 120);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(380, 34);
-            this.textBox3.TabIndex = 58;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(240, 120);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(380, 34);
+            this.txtName.TabIndex = 58;
             // 
             // label5
             // 
@@ -95,7 +95,7 @@
             this.button1.TabIndex = 56;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
             // 
@@ -107,23 +107,23 @@
             this.label3.TabIndex = 55;
             this.label3.Text = "Purchase Price";
             // 
-            // textBox2
+            // txtQuantity
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(240, 374);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 34);
-            this.textBox2.TabIndex = 54;
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantity.Location = new System.Drawing.Point(240, 374);
+            this.txtQuantity.Multiline = true;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(380, 34);
+            this.txtQuantity.TabIndex = 54;
             // 
-            // textBox1
+            // txtPurchasePrice
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(240, 309);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 34);
-            this.textBox1.TabIndex = 53;
+            this.txtPurchasePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPurchasePrice.Location = new System.Drawing.Point(240, 309);
+            this.txtPurchasePrice.Multiline = true;
+            this.txtPurchasePrice.Name = "txtPurchasePrice";
+            this.txtPurchasePrice.Size = new System.Drawing.Size(380, 34);
+            this.txtPurchasePrice.TabIndex = 53;
             // 
             // label4
             // 
@@ -155,35 +155,36 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Name";
             // 
-            // authorTextBox
+            // txtSellPrice
             // 
-            this.authorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.authorTextBox.Location = new System.Drawing.Point(240, 243);
-            this.authorTextBox.Multiline = true;
-            this.authorTextBox.Name = "authorTextBox";
-            this.authorTextBox.Size = new System.Drawing.Size(380, 34);
-            this.authorTextBox.TabIndex = 48;
+            this.txtSellPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSellPrice.Location = new System.Drawing.Point(240, 243);
+            this.txtSellPrice.Multiline = true;
+            this.txtSellPrice.Name = "txtSellPrice";
+            this.txtSellPrice.Size = new System.Drawing.Size(380, 34);
+            this.txtSellPrice.TabIndex = 48;
             // 
-            // titleTextBox
+            // txtCategory
             // 
-            this.titleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.titleTextBox.Location = new System.Drawing.Point(240, 180);
-            this.titleTextBox.Multiline = true;
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(380, 34);
-            this.titleTextBox.TabIndex = 47;
+            this.txtCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategory.Location = new System.Drawing.Point(240, 180);
+            this.txtCategory.Multiline = true;
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(380, 34);
+            this.txtCategory.TabIndex = 47;
             // 
-            // btnAdd
+            // btnSave
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAdd.Location = new System.Drawing.Point(240, 457);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 62);
-            this.btnAdd.TabIndex = 49;
-            this.btnAdd.Text = "Save";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSave.Location = new System.Drawing.Point(240, 457);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 62);
+            this.btnSave.TabIndex = 49;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Edit
             // 
@@ -192,18 +193,18 @@
             this.ClientSize = new System.Drawing.Size(655, 557);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.txtPurchasePrice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.authorTextBox);
-            this.Controls.Add(this.titleTextBox);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtSellPrice);
+            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.btnSave);
             this.Name = "Edit";
             this.Text = "Edit";
             this.ResumeLayout(false);
@@ -215,17 +216,17 @@
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtPurchasePrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox authorTextBox;
-        private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtSellPrice;
+        private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.Button btnSave;
     }
 }

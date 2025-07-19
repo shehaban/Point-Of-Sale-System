@@ -1,12 +1,6 @@
 ﻿using point_of_sale_system.DAL;
+using point_of_sale_system.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace point_of_sale_system.Forms
@@ -18,14 +12,14 @@ namespace point_of_sale_system.Forms
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                string username = txtUsername.Text.Trim();
-                string password = txtPassword.Text;
+                string targetUsername = txtUsername.Text.Trim();
+                string enteredPassword = txtPassword.Text;
 
-                if (string.IsNullOrEmpty(username))
+                if (string.IsNullOrEmpty(targetUsername))
                 {
                     MessageBox.Show("Please enter a username", "Validation Error",
                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -34,20 +28,50 @@ namespace point_of_sale_system.Forms
 
                 using (UserDAL userDal = new UserDAL())
                 {
-                    if (!userDal.VerifyCredentials(username, password))
+                    // Get the target user's information
+                    User targetUser = userDal.GetUserByUsername(targetUsername);
+                    if (targetUser == null)
                     {
-                        MessageBox.Show("Invalid credentials or account locked", "Access Denied",
-                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("User not found", "Error",
+                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
-                    var confirm = MessageBox.Show($"Permanently delete user '{username}'?",
+                    // Verify credentials based on target user's role
+                    bool isAuthorized;
+                    string requiredPasswordType;
+
+                    if (targetUser.Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // For deleting admin: Require the TO-BE-DELETED admin's password
+                        isAuthorized = userDal.VerifyCredentials(targetUsername, enteredPassword);
+                        requiredPasswordType = "the ADMIN'S password you're deleting";
+                    }
+                    else
+                    {
+                        // For deleting non-admin: Require current admin's password
+                        isAuthorized = userDal.VerifyCredentials(UserSession.CurrentUsername, enteredPassword);
+                        requiredPasswordType = "your ADMIN password";
+                    }
+
+                    if (!isAuthorized)
+                    {
+                        MessageBox.Show($"Authentication failed. Please enter {requiredPasswordType}",
+                                     "Access Denied",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Confirmation dialog
+                    var confirm = MessageBox.Show($"Permanently delete {targetUser.Role} user '{targetUsername}'?",
                                                "Confirm Deletion",
                                                MessageBoxButtons.YesNo,
                                                MessageBoxIcon.Warning);
+
                     if (confirm == DialogResult.Yes)
                     {
-                        bool success = userDal.DeleteUser(username);
+                        bool success = userDal.DeleteUser(targetUsername);
                         MessageBox.Show(success ? "User deleted successfully" : "Deletion failed",
                                       "Operation Result",
                                       MessageBoxButtons.OK,
