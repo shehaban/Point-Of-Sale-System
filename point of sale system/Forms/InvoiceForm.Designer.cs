@@ -39,7 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.exportBox = new System.Windows.Forms.CheckBox();
+=======
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +50,11 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lblTotal.Location = new System.Drawing.Point(285, 557);
+=======
+            this.lblTotal.Location = new System.Drawing.Point(325, 557);
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 24);
             this.lblTotal.TabIndex = 23;
@@ -66,7 +73,11 @@
             // 
             this.lblInvoiceNumber.AutoSize = true;
             this.lblInvoiceNumber.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lblInvoiceNumber.Location = new System.Drawing.Point(227, 193);
+=======
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(332, 187);
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(0, 22);
             this.lblInvoiceNumber.TabIndex = 21;
@@ -74,19 +85,33 @@
             // lblDate
             // 
             this.lblDate.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lblDate.Location = new System.Drawing.Point(162, 135);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(265, 38);
+=======
+            this.lblDate.Location = new System.Drawing.Point(247, 135);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(137, 38);
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             this.lblDate.TabIndex = 20;
             // 
             // invoiceDataGridView
             // 
             this.invoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.invoiceDataGridView.Location = new System.Drawing.Point(100, 268);
             this.invoiceDataGridView.Name = "invoiceDataGridView";
             this.invoiceDataGridView.RowHeadersWidth = 51;
             this.invoiceDataGridView.RowTemplate.Height = 26;
             this.invoiceDataGridView.Size = new System.Drawing.Size(388, 259);
+=======
+            this.invoiceDataGridView.Location = new System.Drawing.Point(100, 252);
+            this.invoiceDataGridView.Name = "invoiceDataGridView";
+            this.invoiceDataGridView.RowHeadersWidth = 51;
+            this.invoiceDataGridView.RowTemplate.Height = 26;
+            this.invoiceDataGridView.Size = new System.Drawing.Size(388, 275);
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             this.invoiceDataGridView.TabIndex = 19;
             // 
             // label3
@@ -155,6 +180,7 @@
             this.btnAdd.Text = "Cash";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnCash_Click);
+<<<<<<< HEAD
             // 
             // exportBox
             // 
@@ -167,6 +193,8 @@
             this.exportBox.Text = "Export invoice";
             this.exportBox.UseVisualStyleBackColor = true;
             this.exportBox.CheckedChanged += new System.EventHandler(this.exportBox_CheckedChanged);
+=======
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
             // 
             // InvoiceForm
             // 

@@ -223,7 +223,11 @@ namespace point_of_sale_system.DAL
 
                 return results;
             }
+<<<<<<< HEAD
         public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
+=======
+            public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
         {
             Product product = null;
             OpenConnection();
@@ -364,11 +368,19 @@ namespace point_of_sale_system.DAL
         }
 
         public bool UpdateInvProduct(Product product)
+<<<<<<< HEAD
         {
             try
             {
                 OpenConnection();
                 string query = @"UPDATE Product 
+=======
+{
+    try
+    {
+        OpenConnection();
+        string query = @"UPDATE Product 
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
                        SET quantity = @quantity 
                        WHERE id = @id";
 

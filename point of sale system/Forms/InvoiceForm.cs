@@ -1,7 +1,10 @@
 ﻿using point_of_sale_system.DAL;
 using System;
 using System.Data;
+<<<<<<< HEAD
 using System.Drawing;
+=======
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
 using System.Windows.Forms;
 
 namespace point_of_sale_system.Forms
@@ -27,7 +30,11 @@ namespace point_of_sale_system.Forms
             lblInvoiceNumber.Text = $"Invoice #: {invoiceNumber}";
 
             // ✅ التاريخ والوقت الآن بالتنسيق الكامل
+<<<<<<< HEAD
             lblDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt");
+=======
+            lblDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm tt");
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
 
             lblTotal.Text = $"Total: ${totalAmount:0.00}";
 
@@ -35,6 +42,7 @@ namespace point_of_sale_system.Forms
                 invoiceDataGridView.Columns["ProductID"].Visible = false;
         }
 
+<<<<<<< HEAD
         private void ExportInvoiceAsPng()
         {
             try
@@ -68,6 +76,8 @@ namespace point_of_sale_system.Forms
 
 
 
+=======
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
         private void btnCash_Click(object sender, EventArgs e)
         {
             try
@@ -84,6 +94,7 @@ namespace point_of_sale_system.Forms
                         SaleDate = DateTime.Now
                     });
 
+<<<<<<< HEAD
 
                 }
                 if (exportBox.Checked)
@@ -93,6 +104,12 @@ namespace point_of_sale_system.Forms
                 MessageBox.Show("Payment processed successfully!", "Done",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
+=======
+                }
+
+                MessageBox.Show("Payment processed successfully!", "Done",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+>>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
