@@ -34,7 +34,6 @@ namespace point_of_sale_system.Forms
                 return;
             }
 
-            // Input validation
             if (string.IsNullOrWhiteSpace(txtUsername.Text) || txtUsername.Text.Length < 4)
             {
                 MessageBox.Show("Username must be at least 4 characters");
@@ -53,7 +52,6 @@ namespace point_of_sale_system.Forms
                 return;
             }
 
-            // Check if username exists
             UserDAL userDal = new UserDAL();
             if (!userDal.IsUsernameAvailable(txtUsername.Text))
             {
@@ -61,7 +59,6 @@ namespace point_of_sale_system.Forms
                 return;
             }
 
-            // Create new user
             try
             {
                 User newUser = new User
@@ -76,7 +73,6 @@ namespace point_of_sale_system.Forms
                 if (userDal.AddUser(newUser))
                 {
                     MessageBox.Show("User added successfully");
-                    // Clear fields
                     txtUsername.Text = string.Empty;
                     textBox1.Text = string.Empty;
                     textBox2.Text = string.Empty;

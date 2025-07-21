@@ -15,7 +15,6 @@ namespace point_of_sale_system
         {
             InitializeComponent();
 
-            // Check authorization on load
             if (!UserSession.CurrentUserRole.Equals("Admin", StringComparison.OrdinalIgnoreCase))
             {
                 btnAdd.Enabled = false;
@@ -39,7 +38,6 @@ namespace point_of_sale_system
 
         private void SetupControls()
         {
-            // Disable buttons if not admin (redundant check but safe)
             btnAdd.Enabled = UserSession.IsAdmin();
             btnEdit.Enabled = UserSession.IsAdmin();
             btnDelete.Enabled = UserSession.IsAdmin();
@@ -68,7 +66,7 @@ namespace point_of_sale_system
             AddItem addForm = new AddItem();
             if (addForm.ShowDialog() == DialogResult.OK)
             {
-                LoadProducts(); // Refresh after adding
+                LoadProducts(); 
             }
         }
 
@@ -82,7 +80,6 @@ namespace point_of_sale_system
 
             DataGridViewRow row = dataGridView1.SelectedRows[0];
 
-            // Create Product object from selected row
             Product productToEdit = new Product
             {
                 id = Convert.ToInt32(row.Cells["id"].Value),
@@ -93,11 +90,10 @@ namespace point_of_sale_system
                 quantity = Convert.ToInt32(row.Cells["quantity"].Value)
             };
 
-            // Pass the product to Edit form
             Edit editForm = new Edit(productToEdit);
             if (editForm.ShowDialog() == DialogResult.OK)
             {
-                LoadProducts(); // Refresh grid after editing
+                LoadProducts(); 
             }
         }
 
@@ -122,7 +118,7 @@ namespace point_of_sale_system
                 if (productDal.DeleteProduct(productId))
                 {
                     MessageBox.Show("Product deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadProducts(); // Refresh after deletion
+                    LoadProducts(); 
                 }
                 else
                 {
@@ -138,18 +134,14 @@ namespace point_of_sale_system
 
         private void ProductMng_Load(object sender, EventArgs e)
         {
-            //dataGridView1.Dock = DockStyle.Fill;
 
-            // Font and sizing
             dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12);
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             dataGridView1.RowTemplate.Height = 35;
 
-            // Column behavior
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AllowUserToAddRows = false;
 
-            // Visual improvements
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;

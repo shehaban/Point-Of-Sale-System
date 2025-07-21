@@ -16,7 +16,7 @@ namespace point_of_sale_system
         {
             InitializeComponent();
 
-            if (!UserSession.IsAdmin())
+            if (!UserSession.CurrentUserRole.Equals("Admin", StringComparison.OrdinalIgnoreCase))
             {
                 MessageBox.Show("You are not authorized to access this section.",
                               "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -26,7 +26,6 @@ namespace point_of_sale_system
 
             Load += SaleInfo_Load;
 
-            // Add refresh button click handler
             btnRefresh.Click += BtnRefresh_Click;
         }
 
@@ -64,25 +63,20 @@ namespace point_of_sale_system
 
         private void SaleInfo_Load(object sender, EventArgs e)
         {
-            // Set default dates to today
             dateTimePickerFrom.Value = DateTime.Today;
             dateTimePickerTo.Value = DateTime.Today;
 
-            // Configure date format
             dateTimePickerFrom.Format = DateTimePickerFormat.Custom;
             dateTimePickerFrom.CustomFormat = "dd-MM-yyyy";
             dateTimePickerTo.Format = DateTimePickerFormat.Custom;
             dateTimePickerTo.CustomFormat = "dd-MM-yyyy";
 
-            // Configure DataGridView appearance
             ConfigureDataGridView();
 
-            // Setup report types
             comboReportType.Items.Clear();
             comboReportType.Items.Add("Daily Sales");
             comboReportType.SelectedIndex = 0;
 
-            // Load initial report
             RefreshAllData();
         }
 
@@ -108,21 +102,17 @@ namespace point_of_sale_system
         {
             try
             {
-                // Show loading state
                 btnRefresh.Enabled = false;
                 btnRefresh.Text = "Refreshing...";
                 Cursor.Current = Cursors.WaitCursor;
 
-                // Get current date range
                 DateTime fromDate = dateTimePickerFrom.Value.Date;
                 DateTime toDate = dateTimePickerTo.Value.Date;
 
-                // 1. Get sales data
                 DataTable salesData = saleDAL.GetSalesByDateRange(fromDate, toDate);
                 Reportdgv.DataSource = salesData;
                 FormatDailySalesGrid();
 
-                // 2. Calculate totals (sales minus returns)
                 decimal totalSales = saleDAL.GetTotalSalesAmount(fromDate, toDate);
                 decimal returns = saleDAL.GetReturnSummary().AsEnumerable()
                                  .Sum(row => Convert.ToDecimal(row["returned_amount"]));
@@ -131,7 +121,6 @@ namespace point_of_sale_system
                 decimal profitDeductions = saleDAL.GetReturnSummary().AsEnumerable()
                                           .Sum(row => Convert.ToDecimal(row["profit_deduction"]));
 
-                // 3. Update displays
                 txtTotalAmount.Text = (totalSales - returns).ToString("0.00");
                 txtNetProfit.Text = (netProfit - profitDeductions).ToString("0.00");
                 txtTotalReturn.Text = returns.ToString("0.00");
@@ -143,7 +132,6 @@ namespace point_of_sale_system
             }
             finally
             {
-                // Restore UI state
                 btnRefresh.Enabled = true;
                 btnRefresh.Text = "Refresh";
                 Cursor.Current = Cursors.Default;
@@ -210,7 +198,6 @@ namespace point_of_sale_system
             {
                 try
                 {
-                    // TODO: Implement export functionality
                     MessageBox.Show($"Report exported successfully to {saveFileDialog.FileName}",
                         "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -253,7 +240,6 @@ namespace point_of_sale_system
         {
             try
             {
-                // Get current values from the database directly
                 decimal currentReturn = saleDAL.GetReturnSummary().AsEnumerable()
                                       .Sum(row => Convert.ToDecimal(row["returned_amount"]));
 
@@ -261,16 +247,13 @@ namespace point_of_sale_system
                                       saleDAL.GetReturnSummary().AsEnumerable()
                                       .Sum(row => Convert.ToDecimal(row["profit_deduction"]));
 
-                // Calculate new values
                 decimal costPrice = saleDAL.GetProductPurchasePrice(productId);
                 decimal newReturn = currentReturn + (quantity * unitPrice);
                 decimal profitDeduction = (unitPrice - costPrice) * quantity;
                 decimal newProfit = currentProfit - profitDeduction;
 
-                // Update UI - force refresh from database
                 RefreshAllData();
 
-                // Also update the specific textboxes
                 txtTotalReturn.Text = newReturn.ToString("0.00");
                 txtNetProfit.Text = newProfit.ToString("0.00");
             }
@@ -283,13 +266,11 @@ namespace point_of_sale_system
 
         private decimal GetCurrentNetProfit()
         {
-            // Get the current net profit from the database
             return saleDAL.GetTodayNetProfit();
         }
 
         private decimal GetDecimalFromTextBox(TextBox textBox)
         {
-            // Remove all non-numeric characters except decimal point
             string cleanString = new string(textBox.Text
                 .Where(c => char.IsDigit(c) || c == '.' || c == '-')
                 .ToArray());
@@ -298,7 +279,7 @@ namespace point_of_sale_system
             {
                 return result;
             }
-            return 0m; // Default value if parsing fails
+            return 0m; 
         }
     }
 }

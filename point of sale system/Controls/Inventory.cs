@@ -20,26 +20,21 @@ namespace point_of_sale_system
 
         private void SetupDataGridView()
         {
-            // Font and sizing
             dataGridViewInventory.DefaultCellStyle.Font = new Font("Segoe UI", 12);
             dataGridViewInventory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             dataGridViewInventory.RowTemplate.Height = 35;
 
-            // Column behavior
             dataGridViewInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewInventory.AllowUserToAddRows = false;
 
-            // Visual improvements
             dataGridViewInventory.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dataGridViewInventory.EnableHeadersVisualStyles = false;
             dataGridViewInventory.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
             dataGridViewInventory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            // Configure columns
             dataGridViewInventory.AutoGenerateColumns = false;
             dataGridViewInventory.Columns.Clear();
 
-            // Add columns
             dataGridViewInventory.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "id",
@@ -72,7 +67,7 @@ namespace point_of_sale_system
                 Width = 100,
                 DefaultCellStyle = new DataGridViewCellStyle()
                 {
-                    Format = "N2" // Changed from "C2" to "N2" to show numbers only
+                    Format = "N2" 
                 }
             });
 

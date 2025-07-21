@@ -1,4 +1,6 @@
-﻿using point_of_sale_system.Models;
+﻿using point_of_sale_system.Forms;
+using point_of_sale_system.Models;
+using point_of_sale_system.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +15,17 @@ namespace point_of_sale_system
 {
     public partial class saleMngFrm : Form
     {
-        private SaleInfo sharedSaleInfo; // shared instance
-        public SaleInfo SharedSaleInfo => sharedSaleInfo; // public getter
+        private SaleInfo sharedSaleInfo; 
+        public SaleInfo SharedSaleInfo => sharedSaleInfo; 
         private List<Button> navButtons;
-        private string currentUserRole; // Add this field
+        private string currentUserRole; 
         public saleMngFrm(string role)
         {
             InitializeComponent();
 
             navButtons = new List<Button>() { btnProducts, btnInventory, btnSalesMng, mngbtn, homebtn };
 
-            currentUserRole = role; // Store the role
+            currentUserRole = role; 
 
             btnProducts.Click += btnProducts_Click;
         }
@@ -73,7 +75,7 @@ namespace point_of_sale_system
             if (sharedSaleInfo == null)
                 sharedSaleInfo = new SaleInfo();
 
-            showUserControl(sharedSaleInfo); // استخدم نفس النسخة
+            showUserControl(sharedSaleInfo); 
             SetActiveButton(btnSalesMng);
         }
 
@@ -94,6 +96,11 @@ namespace point_of_sale_system
         {
             showUserControl(new Inventory());
             SetActiveButton(btnProducts);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showUserControl(new MessagesUC());
         }
     }
 }

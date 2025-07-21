@@ -10,6 +10,8 @@ namespace point_of_sale_system.Models
     {
         public static string CurrentUserRole { get; set; }
         public static string CurrentUsername { get; set; }
+        public static int CurrentUserID { get; set; } 
+
 
         public static bool IsAdmin()
         {
@@ -18,6 +20,7 @@ namespace point_of_sale_system.Models
 
         public static void Login(User user)
         {
+            CurrentUserID = user.UserId;           
             CurrentUserRole = user.Role;
             CurrentUsername = user.Username;
         }

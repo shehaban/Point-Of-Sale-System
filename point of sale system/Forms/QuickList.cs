@@ -34,14 +34,14 @@ namespace point_of_sale_system
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Size = new Size(1000, 635);
-            this.BackColor = Color.WhiteSmoke;
+            this.BackColor = Color.FromArgb(246, 246, 248);
 
-            // Configure flow layout panel
             flowLayoutPanel1.BackColor = Color.White;
-            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel1.BorderStyle = BorderStyle.None;
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
-            flowLayoutPanel1.Padding = new Padding(10);
+            flowLayoutPanel1.Padding = new Padding(15);
+            flowLayoutPanel1.Margin = new Padding(0);
         }
 
         private void LoadProducts()
@@ -67,29 +67,71 @@ namespace point_of_sale_system
             {
                 Button productButton = new Button
                 {
-                    Text = $"{row["name"]}\n${Convert.ToDecimal(row["unit_price"]):0.00}",
+                    Text = $"{row["name"]}\n{Convert.ToDecimal(row["unit_price"]):0.00}",
                     Tag = row["id"],
-                    Size = new Size(150, 90), // Slightly larger buttons
-                    Margin = new Padding(8),
-                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                    BackColor = Color.SteelBlue,
-                    ForeColor = Color.White,
+                    Size = new Size(180, 110),
+                    Margin = new Padding(12),
+                    Font = new Font("Segoe UI Semibold", 11, FontStyle.Bold),
+                    ForeColor = Color.FromArgb(30, 30, 40), 
                     FlatStyle = FlatStyle.Flat,
-                    Cursor = Cursors.Hand
+                    Cursor = Cursors.Hand,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    BackColor = Color.White,
+                    FlatAppearance = { BorderSize = 0 }
                 };
 
-                // Button hover effects
-                productButton.FlatAppearance.BorderSize = 0;
-                productButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 130, 200);
-                productButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 110, 180);
+                productButton.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, productButton.Width, productButton.Height, 25, 25));
 
-                // Center-align text
-                productButton.TextAlign = ContentAlignment.MiddleCenter;
+                productButton.Paint += (sender, e) =>
+                {
+                    Button btn = (Button)sender;
+                    var rect = e.ClipRectangle;
+
+                    using (var brush = new System.Drawing.Drawing2D.LinearGradientBrush(rect,
+                        Color.FromArgb(48, 63, 159),     
+                        Color.FromArgb(0, 188, 212),     
+                        90f))
+                    {
+                        e.Graphics.FillRectangle(brush, rect);
+                    }
+
+                    using (var textBrush = new SolidBrush(Color.White))
+                    {
+                        e.Graphics.DrawString(btn.Text.Split('\n')[0],
+                            new Font(btn.Font.FontFamily, btn.Font.Size, FontStyle.Bold),
+                            textBrush,
+                            new RectangleF(0, 15, btn.Width, btn.Height / 2),
+                            new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    }
+
+                    using (var priceBrush = new SolidBrush(Color.FromArgb(178, 235, 242))) 
+                    {
+                        e.Graphics.DrawString(btn.Text.Split('\n')[1],
+                            btn.Font,
+                            priceBrush,
+                            new RectangleF(0, btn.Height / 2 + 10, btn.Width, btn.Height / 2),
+                            new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    }
+                };
+
+                productButton.MouseEnter += (s, e) =>
+                {
+                    productButton.BackColor = Color.FromArgb(224, 247, 250); 
+                };
+                productButton.MouseLeave += (s, e) =>
+                {
+                    productButton.BackColor = Color.White;
+                };
 
                 productButton.Click += ProductButton_Click;
+
                 flowLayoutPanel1.Controls.Add(productButton);
             }
         }
+
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         private void ProductButton_Click(object sender, EventArgs e)
         {
@@ -107,9 +149,25 @@ namespace point_of_sale_system
                     unit_price = Convert.ToDecimal(productRow["unit_price"])
                 };
 
+                clickedButton.BackColor = Color.FromArgb(220, 235, 255);
+                clickedButton.Refresh();
+                System.Threading.Thread.Sleep(100);
+                clickedButton.BackColor = Color.White;
+
                 mainSaleForm.SetSelectedProduct(selectedProduct);
                 mainSaleForm.AddToCart(1);
                 this.Close();
+            }
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int CS_DROPSHADOW = 0x20000;
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
             }
         }
     }

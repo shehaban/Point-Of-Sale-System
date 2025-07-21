@@ -23,13 +23,13 @@ namespace point_of_sale_system.Forms
         {
             _usersTable = _userDal.GetAllUsers();
             cmbUsers.DataSource = _usersTable;
-            cmbUsers.DisplayMember = "Username"; // Show usernames in the dropdown
-            cmbUsers.ValueMember = "Username";  // Store usernames as values
+            cmbUsers.DisplayMember = "Username"; 
+            cmbUsers.ValueMember = "Username";  
         }
 
         private void ConfigureComboBox()
         {
-            cmbUsers.DropDownStyle = ComboBoxStyle.DropDownList; // Prevent manual editing
+            cmbUsers.DropDownStyle = ComboBoxStyle.DropDownList; 
             cmbUsers.SelectedIndexChanged += CmbUsers_SelectedIndexChanged;
         }
 
@@ -58,7 +58,6 @@ namespace point_of_sale_system.Forms
             string confirmPassword = txtConfirmPassword.Text;
             string role = cmbRole.SelectedItem.ToString();
 
-            // Validate inputs
             if (string.IsNullOrEmpty(newUsername))
             {
                 MessageBox.Show("Please enter a username");
@@ -71,7 +70,6 @@ namespace point_of_sale_system.Forms
                 return;
             }
 
-            // Check if username is being changed to an existing one
             if (!newUsername.Equals(originalUsername, StringComparison.OrdinalIgnoreCase) &&
                 !_userDal.IsUsernameAvailable(newUsername, originalUsername))
             {
@@ -79,7 +77,6 @@ namespace point_of_sale_system.Forms
                 return;
             }
 
-            // Update user
             var updatedUser = new User
             {
                 Username = newUsername,
@@ -94,7 +91,7 @@ namespace point_of_sale_system.Forms
             if (_userDal.UpdateUser(originalUsername, updatedUser))
             {
                 MessageBox.Show("User updated successfully!");
-                LoadUsers(); // Refresh ComboBox
+                LoadUsers(); 
                 ClearFields();
             }
             else

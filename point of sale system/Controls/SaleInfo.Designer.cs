@@ -164,6 +164,7 @@
             this.txtTotalAmount.Location = new System.Drawing.Point(234, 509);
             this.txtTotalAmount.Multiline = true;
             this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(207, 54);
             this.txtTotalAmount.TabIndex = 42;
             // 
@@ -173,6 +174,7 @@
             this.txtNetProfit.Location = new System.Drawing.Point(234, 575);
             this.txtNetProfit.Multiline = true;
             this.txtNetProfit.Name = "txtNetProfit";
+            this.txtNetProfit.ReadOnly = true;
             this.txtNetProfit.Size = new System.Drawing.Size(207, 54);
             this.txtNetProfit.TabIndex = 43;
             // 
@@ -214,6 +216,7 @@
             this.txtTotalReturn.Location = new System.Drawing.Point(234, 635);
             this.txtTotalReturn.Multiline = true;
             this.txtTotalReturn.Name = "txtTotalReturn";
+            this.txtTotalReturn.ReadOnly = true;
             this.txtTotalReturn.Size = new System.Drawing.Size(207, 54);
             this.txtTotalReturn.TabIndex = 47;
             // 

@@ -10,10 +10,9 @@ namespace point_of_sale_system
         private readonly ProductDAL productDal = new ProductDAL();
         private Product product;
 
-        // Add parameterless constructor for designer
         public Edit()
         {
-            InitializeComponent(); // Required for Windows Forms designer
+            InitializeComponent(); 
         }
 
         internal Edit(Product productToEdit) : this()
@@ -38,7 +37,6 @@ namespace point_of_sale_system
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Validate inputs
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Please enter product name", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -74,7 +72,6 @@ namespace point_of_sale_system
                 return;
             }
 
-            // Update product
             product.name = txtName.Text.Trim();
             product.category = txtCategory.Text.Trim();
             product.unit_price = sellPrice;

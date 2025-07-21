@@ -14,7 +14,7 @@ namespace point_of_sale_system.DAL
             try
             {
                 OpenConnection();
-                string query = "SELECT * FROM Product WHERE IsDeleted = 0"; // Only show non-deleted products
+                string query = "SELECT * FROM Product WHERE IsDeleted = 0"; 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -44,7 +44,6 @@ namespace point_of_sale_system.DAL
                 {
                     try
                     {
-                        // Check for existing non-deleted product with same name, category, and unit price
                         string checkQuery = @"SELECT COUNT(*) FROM Product 
                                       WHERE name = @n AND category = @c AND unit_price = @u AND IsDeleted = 0";
 
@@ -60,7 +59,6 @@ namespace point_of_sale_system.DAL
                             throw new Exception("A product with the same name, category, and price already exists.");
                         }
 
-                        // Add the product
                         string productQuery = @"INSERT INTO Product (name, category, unit_price, purchase_price, quantity, IsDeleted) 
                                         VALUES (@n, @c, @u, @p, @q, 0);
                                         SELECT SCOPE_IDENTITY();";
@@ -74,7 +72,6 @@ namespace point_of_sale_system.DAL
 
                         int newProductId = Convert.ToInt32(productCmd.ExecuteScalar());
 
-                        // Add to inventory
                         string inventoryQuery = @"INSERT INTO Inventory (product_id, reorder_level) 
                                           VALUES (@product_id, 2)";
                         SqlCommand inventoryCmd = new SqlCommand(inventoryQuery, connection, transaction);
@@ -143,7 +140,6 @@ namespace point_of_sale_system.DAL
             try
             {
                 OpenConnection();
-                // Change from hard delete to soft delete
                 string query = "UPDATE Product SET IsDeleted = 1 WHERE Id = @id";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
@@ -172,7 +168,7 @@ namespace point_of_sale_system.DAL
                 string query = @"SELECT id, name, category, unit_price, purchase_price, quantity 
                 FROM Product 
                 WHERE (name LIKE @search OR category LIKE @search)
-                AND IsDeleted = 0"; // Add IsDeleted check
+                AND IsDeleted = 0"; 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@search", $"%{searchTerm}%");
@@ -223,11 +219,8 @@ namespace point_of_sale_system.DAL
 
                 return results;
             }
-<<<<<<< HEAD
-        public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
-=======
+
             public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
->>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
         {
             Product product = null;
             OpenConnection();
@@ -268,7 +261,6 @@ namespace point_of_sale_system.DAL
                 {
                     try
                     {
-                        // 1. Add the product
                         string productQuery = @"INSERT INTO Product (name, category, unit_price, purchase_price, quantity) 
                                              VALUES (@name, @category, @unit_price, @purchase_price, @quantity);
                                              SELECT SCOPE_IDENTITY();";
@@ -282,7 +274,6 @@ namespace point_of_sale_system.DAL
 
                         int newProductId = Convert.ToInt32(productCmd.ExecuteScalar());
 
-                        // 2. Add to Inventory table with default reorder level (2)
                         string inventoryQuery = @"INSERT INTO Inventory (product_id, reorder_level) 
                                                VALUES (@product_id, 2)";
 
@@ -368,19 +359,12 @@ namespace point_of_sale_system.DAL
         }
 
         public bool UpdateInvProduct(Product product)
-<<<<<<< HEAD
         {
-            try
-            {
-                OpenConnection();
-                string query = @"UPDATE Product 
-=======
-{
+
     try
     {
         OpenConnection();
         string query = @"UPDATE Product 
->>>>>>> 9750bad2b4b58b64229bf1f9bf5c2122d8096bac
                        SET quantity = @quantity 
                        WHERE id = @id";
 
@@ -398,7 +382,6 @@ namespace point_of_sale_system.DAL
                 CloseConnection();
             }
         }
-
 
     }
 }

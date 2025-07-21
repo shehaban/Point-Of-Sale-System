@@ -22,3 +22,9 @@ C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.ProductMng.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.UserMng.resources
 C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Inventory.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.AboutUS.resources
+C:\College\C#\point of sale system\point of sale system\bin\Debug\Newtonsoft.Json.dll
+C:\College\C#\point of sale system\point of sale system\bin\Debug\Newtonsoft.Json.xml
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point of.26A4575D.Up2Date
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Forms.Contact.resources
+C:\College\C#\point of sale system\point of sale system\obj\Debug\point_of_sale_system.Controls.MessagesUC.resources

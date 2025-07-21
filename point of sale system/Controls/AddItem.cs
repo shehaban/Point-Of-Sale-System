@@ -16,7 +16,6 @@ namespace point_of_sale_system
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Input Validation
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("Please enter product name", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -54,7 +53,6 @@ namespace point_of_sale_system
 
             try
             {
-                // Only check non-deleted products
                 Product existingProduct = productDal.GetProductByNameCategoryAndPrice(
                     txtName.Text.Trim(),
                     txtCategory.Text.Trim(),
@@ -62,7 +60,6 @@ namespace point_of_sale_system
 
                 if (existingProduct != null)
                 {
-                    // Update quantity of existing product
                     existingProduct.quantity += quantity;
                     if (productDal.UpdateInvProduct(existingProduct))
                     {
@@ -74,7 +71,6 @@ namespace point_of_sale_system
                 }
                 else
                 {
-                    // Add new product
                     Product newProduct = new Product
                     {
                         name = txtName.Text.Trim(),

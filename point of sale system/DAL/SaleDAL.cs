@@ -172,7 +172,6 @@ namespace point_of_sale_system.DAL
                 {
                     try
                     {
-                        // 1. Record the return
                         string returnQuery = @"INSERT INTO Returns 
                             (invoice_id, product_id, quantity, returned_amount, profit_deduction) 
                             VALUES (@invoiceId, @productId, @quantity, @returnedAmount, @profitDeduction)";
@@ -185,7 +184,6 @@ namespace point_of_sale_system.DAL
                         returnCmd.Parameters.AddWithValue("@profitDeduction", profitDeduction);
                         returnCmd.ExecuteNonQuery();
 
-                        // 2. Update invoice total
                         string invoiceQuery = @"UPDATE Invoices 
                                      SET total = total - @returnedAmount 
                                      WHERE id = @invoiceId";
@@ -195,7 +193,6 @@ namespace point_of_sale_system.DAL
                         invoiceCmd.Parameters.AddWithValue("@invoiceId", invoiceId);
                         invoiceCmd.ExecuteNonQuery();
 
-                        // 3. Update product quantity
                         string productQuery = @"UPDATE Product 
                                      SET quantity = quantity + @quantity 
                                      WHERE id = @productId";

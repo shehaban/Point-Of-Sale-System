@@ -19,7 +19,6 @@ namespace point_of_sale_system
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            // Input validation
             if (string.IsNullOrEmpty(username))
             {
                 errorProvider1.SetError(txtUsername, "Username is required");
@@ -40,11 +39,10 @@ namespace point_of_sale_system
                 return;
             }
 
-            // Verify password
             if (!PasswordHasher.VerifyPassword(password, user.PasswordHash))
             {
                 userDal.IncrementFailedAttempts(username);
-                user = userDal.GetUserByUsername(username); // Refresh user data
+                user = userDal.GetUserByUsername(username); 
 
                 int remainingAttempts = UserDAL.MaxAttemptsLevel3 - user.FailedAttempts;
                 string warning = remainingAttempts > 0 ?
@@ -56,13 +54,12 @@ namespace point_of_sale_system
                 return;
             }
 
-            // Successful login
             userDal.ResetFailedAttempts(username);
 
             UserSession.CurrentUserRole = user.Role;
             UserSession.CurrentUsername = username;
+            UserSession.CurrentUserID = user.UserId;
 
-            // Redirect based on role
             new mainFrm(UserSession.CurrentUserRole).Show();
             this.Hide();
         }
@@ -74,19 +71,15 @@ namespace point_of_sale_system
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            // Toggle password visibility
             if (checkBoxShowPassword.Checked)
             {
-                // Show password
-                txtPassword.PasswordChar = '\0'; // Null character shows actual text
+                txtPassword.PasswordChar = '\0'; 
             }
             else
             {
-                // Hide password
-                txtPassword.PasswordChar = '●'; // Or use '*'
+                txtPassword.PasswordChar = '●'; 
             }
 
-            // Move cursor to end of text to see the change
             txtPassword.SelectionStart = txtPassword.TextLength;
         }
     }

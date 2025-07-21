@@ -28,7 +28,6 @@ namespace point_of_sale_system.Forms
 
                 using (UserDAL userDal = new UserDAL())
                 {
-                    // Get the target user's information
                     User targetUser = userDal.GetUserByUsername(targetUsername);
                     if (targetUser == null)
                     {
@@ -37,19 +36,16 @@ namespace point_of_sale_system.Forms
                         return;
                     }
 
-                    // Verify credentials based on target user's role
                     bool isAuthorized;
                     string requiredPasswordType;
 
                     if (targetUser.Role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        // For deleting admin: Require the TO-BE-DELETED admin's password
                         isAuthorized = userDal.VerifyCredentials(targetUsername, enteredPassword);
                         requiredPasswordType = "the ADMIN'S password you're deleting";
                     }
                     else
                     {
-                        // For deleting non-admin: Require current admin's password
                         isAuthorized = userDal.VerifyCredentials(UserSession.CurrentUsername, enteredPassword);
                         requiredPasswordType = "your ADMIN password";
                     }
@@ -63,7 +59,6 @@ namespace point_of_sale_system.Forms
                         return;
                     }
 
-                    // Confirmation dialog
                     var confirm = MessageBox.Show($"Permanently delete {targetUser.Role} user '{targetUsername}'?",
                                                "Confirm Deletion",
                                                MessageBoxButtons.YesNo,

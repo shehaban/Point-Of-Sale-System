@@ -10,14 +10,12 @@ namespace point_of_sale_system.DAL
 {
     internal class UserDAL : DbHelper, IDisposable
     {
-        // Constants for login attempt limits
-        public const int MaxAttemptsLevel1 = 3; // 1-minute lock
-        public const int MaxAttemptsLevel2 = 4; // 5-minute lock
-        public const int MaxAttemptsLevel3 = 5; // 24-hour lock
+        public const int MaxAttemptsLevel1 = 3; 
+        public const int MaxAttemptsLevel2 = 4; 
+        public const int MaxAttemptsLevel3 = 5; 
 
         public bool AddUser(User user)
         {
-            // Check if a non-deleted user with the same username exists
             string checkQuery = "SELECT COUNT(*) FROM Users WHERE username = @Username AND IsDeleted = 0";
             try
             {
@@ -60,7 +58,7 @@ namespace point_of_sale_system.DAL
             User user = null;
             string query = @"SELECT id as UserId, username, password as PasswordHash, 
             role, FailedAttempts, LastAttempt, is_locked, IsDeleted
-            FROM Users WHERE username = @Username AND IsDeleted = 0"; // Add IsDeleted check
+            FROM Users WHERE username = @Username AND IsDeleted = 0"; 
 
             try
             {
@@ -215,7 +213,6 @@ namespace point_of_sale_system.DAL
                 {
                     try
                     {
-                        // Change from DELETE to UPDATE with soft delete
                         string query = "UPDATE Users SET IsDeleted = 1 WHERE Username = @Username";
                         using (SqlCommand cmd = new SqlCommand(query, connection, transaction))
                         {
@@ -244,7 +241,7 @@ namespace point_of_sale_system.DAL
             try
             {
                 OpenConnection();
-                string query = "SELECT Id, Username, Role FROM Users WHERE IsDeleted = 0"; // Only non-deleted users
+                string query = "SELECT Id, Username, Role FROM Users WHERE IsDeleted = 0"; 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -322,9 +319,6 @@ namespace point_of_sale_system.DAL
                 CloseConnection();
             }
         }
-
-
-
         public void Dispose()
         {
             CloseConnection();

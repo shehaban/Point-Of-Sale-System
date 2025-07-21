@@ -24,33 +24,6 @@ namespace point_of_sale_system
         private bool isUpdatingCart = false;
         private SaleInfo saleInfo;
 
-        //public saleFrm()
-        //{
-        //    InitializeComponent();
-        //    WireUpButtonEvents();
-        //    InitializeDataGridViews();
-
-        //    dataGridViewCart.DataSource = cart;
-        //    this.WindowState = FormWindowState.Maximized;
-        //    this.FormBorderStyle = FormBorderStyle.None;
-
-        //    try
-        //    {
-        //        currentInvoiceId = invoiceDAL.CreateInvoice(0, currentUserId);
-        //        UpdateTotalPrice();
-        //        LoadAllProducts();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Failed to initialize invoice: {ex.Message}\n\n" +
-        //                      "Please check your database connection and try again.",
-        //                      "Initialization Error",
-        //                      MessageBoxButtons.OK,
-        //                      MessageBoxIcon.Error);
-        //        this.Close();
-        //    }
-        //}
-
         public saleFrm(SaleInfo saleInfo)
         {
 
@@ -80,32 +53,23 @@ namespace point_of_sale_system
             }
         }
 
-        // In the InitializeDataGridViews() method, add these styling properties:
         private void InitializeDataGridViews()
         {
-            // Initialize cart DataTable structure
             cart.Columns.Add("ProductID", typeof(int));
             cart.Columns.Add("Name", typeof(string));
             cart.Columns.Add("Quantity", typeof(int));
             cart.Columns.Add("UnitPrice", typeof(decimal));
             cart.Columns.Add("TotalPrice", typeof(decimal));
 
-            //dataGridViewCart.Columns["UnitPrice"].DefaultCellStyle.Format = "0.00";
-            //dataGridViewCart.Columns["TotalPrice"].DefaultCellStyle.Format = "0.00";
-
-            //dataGridViewCart.Columns["UnitPrice"].ValueType = typeof(decimal);
-            //dataGridViewCart.Columns["TotalPrice"].ValueType = typeof(decimal);
-
+            
             dataGridViewCart.DataSource = cart;
 
-            // Styling for ProductsDataGridView (product list)
             ProductsDataGridView.AutoGenerateColumns = true;
             ProductsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ProductsDataGridView.MultiSelect = false;
             ProductsDataGridView.AllowUserToAddRows = false;
             ProductsDataGridView.SelectionChanged += ProductsDataGridView_SelectionChanged;
 
-            // Apply styling similar to ProductMng
             ProductsDataGridView.DefaultCellStyle.Font = new Font("Segoe UI", 12);
             ProductsDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             ProductsDataGridView.RowTemplate.Height = 35;
@@ -115,7 +79,6 @@ namespace point_of_sale_system
             ProductsDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
             ProductsDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            // Styling for dataGridViewCart (cart)
             dataGridViewCart.DefaultCellStyle.Font = new Font("Segoe UI", 12);
             dataGridViewCart.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             dataGridViewCart.RowTemplate.Height = 35;
@@ -175,7 +138,6 @@ namespace point_of_sale_system
         {
             if (selectedProduct == null && dataGridViewCart.SelectedRows.Count > 0)
             {
-                // Get product from cart selection
                 DataRowView selectedRow = (DataRowView)dataGridViewCart.SelectedRows[0].DataBoundItem;
                 selectedProduct = new Product
                 {
@@ -204,7 +166,6 @@ namespace point_of_sale_system
                     return;
                 }
 
-                // Check available quantity
                 int availableQuantity = productDAL.GetProductQuantity(selectedProduct.id);
                 if (qty > availableQuantity)
                 {
@@ -217,7 +178,6 @@ namespace point_of_sale_system
 
                 if (existingRows.Length > 0)
                 {
-                    // Update existing cart item
                     int newQty = (int)existingRows[0]["Quantity"] + qty;
                     if (newQty > availableQuantity)
                     {
@@ -231,7 +191,6 @@ namespace point_of_sale_system
                 }
                 else
                 {
-                    // Add new item to cart
                     DataRow row = cart.NewRow();
                     row["ProductID"] = selectedProduct.id;
                     row["Name"] = selectedProduct.name;
@@ -243,7 +202,6 @@ namespace point_of_sale_system
 
                 UpdateTotalPrice();
 
-                // Only clear if we're not working with cart selection
                 if (dataGridViewCart.SelectedRows.Count == 0)
                 {
                     ClearSelection();
@@ -351,7 +309,6 @@ namespace point_of_sale_system
             }
             else
             {
-                // Safeguard against unexpected data type or null
                 selectedProduct = null;
                 txtSearch.Text = string.Empty;
             }
@@ -368,7 +325,6 @@ namespace point_of_sale_system
 
             try
             {
-                // First check all products have sufficient quantity
                 foreach (DataRow row in cart.Rows)
                 {
                     int productId = (int)row["ProductID"];
@@ -392,12 +348,11 @@ namespace point_of_sale_system
                 {
                     try
                     {
-                        // Update quantities in database
                         foreach (DataRow row in cart.Rows)
                         {
                             int productId = (int)row["ProductID"];
                             int qty = (int)row["Quantity"];
-                            productDAL.UpdateProductQuantity(productId, -qty); // Subtract sold quantity
+                            productDAL.UpdateProductQuantity(productId, -qty); 
                         }
 
                         currentInvoiceId = invoiceDAL.CreateInvoice(0);
@@ -467,7 +422,6 @@ namespace point_of_sale_system
 
         private void ClearSelection()
         {
-            // Only clear if we're not working with cart selection
             if (dataGridViewCart.SelectedRows.Count == 0)
             {
                 selectedProduct = null;
@@ -530,7 +484,7 @@ namespace point_of_sale_system
         public void SetSelectedProduct(Product product)
         {
             selectedProduct = product;
-            txtSearch.Text = product.name; // This updates the search box
+            txtSearch.Text = product.name; 
             txtQuantity.Focus();
         }
 
@@ -550,7 +504,6 @@ namespace point_of_sale_system
             }
         }
 
-        // In saleFrm.cs
         private void ReturnItemButton_Click(object sender, EventArgs e)
         {
             if (dataGridViewCart.SelectedRows.Count == 0)
@@ -562,7 +515,6 @@ namespace point_of_sale_system
 
             try
             {
-                // Get selected item details
                 DataRowView selectedRow = (DataRowView)dataGridViewCart.SelectedRows[0].DataBoundItem;
                 int productId = (int)selectedRow["ProductID"];
                 string productName = selectedRow["Name"].ToString();
@@ -570,7 +522,6 @@ namespace point_of_sale_system
                 decimal unitPrice = (decimal)selectedRow["UnitPrice"];
                 decimal totalPrice = (decimal)selectedRow["TotalPrice"];
 
-                // Confirm with user
                 var confirmResult = MessageBox.Show($"Return {quantity} × {productName} ({unitPrice:N2} each)?\n" +
                                                   $"Total refund: {totalPrice:N2}",
                                                   "Confirm Return",
@@ -581,7 +532,6 @@ namespace point_of_sale_system
                     return;
                 }
 
-                // Process the return through DAL
                 decimal costPrice = productDAL.GetProductPurchasePrice(productId);
                 decimal profitDeduction = (unitPrice - costPrice) * quantity;
 
@@ -589,17 +539,14 @@ namespace point_of_sale_system
 
                 if (success)
                 {
-                    // Remove from cart (UI)
                     DataRow[] rows = cart.Select($"ProductID = {productId}");
                     if (rows.Length > 0)
                     {
                         cart.Rows.Remove(rows[0]);
                     }
 
-                    // Update cart total
                     UpdateTotalPrice();
 
-                    // Update sales info display
                     if (saleInfo != null)
                     {
                         saleInfo.UpdateOnReturn(productId, quantity, unitPrice);

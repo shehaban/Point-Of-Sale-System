@@ -73,6 +73,76 @@ namespace point_of_sale_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_text_contact_message_smart_vector_picture_image_10439280 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-text-contact-message-smart-vector-picture-image_10439280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_text_contact_message_smart_vector_picture_image_10439280__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-text-contact-message-smart-vector-picture-image_10439280 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_text_contact_message_smart_vector_picture_image_10439280__2_ {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-text-contact-message-smart-vector-picture-image_10439280 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_text_contact_message_smart_vector_picture_image_10439280__3_ {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-text-contact-message-smart-vector-picture-image_10439280 (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_icon_28__1_ {
+            get {
+                object obj = ResourceManager.GetObject("point-of-sale-icon-28 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_icon_28__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("point-of-sale-icon-28 (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_icon_28__1___2_ {
+            get {
+                object obj = ResourceManager.GetObject("point-of-sale-icon-28 (1) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap POS_Software {
             get {
                 object obj = ResourceManager.GetObject("POS-Software", resourceCulture);
@@ -156,6 +226,26 @@ namespace point_of_sale_system.Properties {
         internal static System.Drawing.Bitmap POS_Software1 {
             get {
                 object obj = ResourceManager.GetObject("POS-Software1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_07_21_145036 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-07-21 145036", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_07_21_145314 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-07-21 145314", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

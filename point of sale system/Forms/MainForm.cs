@@ -1,4 +1,5 @@
-﻿using point_of_sale_system.Models;
+﻿using point_of_sale_system.Forms;
+using point_of_sale_system.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,6 @@ namespace point_of_sale_system
 
         private void mainFrm_Load(object sender, EventArgs e)
         {
-            sharedSaleInfo = new SaleInfo();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,6 +67,21 @@ namespace point_of_sale_system
         private void Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AboutUS about = new AboutUS();
+            about.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Contact contact = new Contact();
+            contact.Show();
+            this.Hide();
+            this.Hide();
         }
     }
 }

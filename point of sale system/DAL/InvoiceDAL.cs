@@ -11,7 +11,6 @@ namespace point_of_sale_system.DAL
             SqlConnection connection = null;
             try
             {
-                // Replace with your actual connection string
                 string connectionString = "Server=.;Database=pos;Integrated Security=True;";
 
                 connection = new SqlConnection(connectionString);
@@ -37,7 +36,6 @@ namespace point_of_sale_system.DAL
             }
             catch (SqlException ex)
             {
-                // More detailed error information
                 string errorDetails = $"SQL Error {ex.Number}: {ex.Message}\n" +
                                     $"Procedure: {ex.Procedure}\n" +
                                     $"Line Number: {ex.LineNumber}";

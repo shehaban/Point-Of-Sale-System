@@ -28,7 +28,7 @@ namespace point_of_sale_system.DAL
             List<Product> lowStock = new List<Product>();
             OpenConnection();
             string query = @"SELECT p.* FROM Product p 
-           WHERE p.quantity <= 2 AND p.IsDeleted = 0"; // Only non-deleted products
+           WHERE p.quantity <= 2 AND p.IsDeleted = 0"; 
             using (SqlCommand cmd = new SqlCommand(query, connection))
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -55,7 +55,7 @@ namespace point_of_sale_system.DAL
             OpenConnection();
             string query = @"SELECT * FROM Product 
            WHERE (name LIKE @search OR category LIKE @search)
-           AND IsDeleted = 0"; // Only non-deleted products
+           AND IsDeleted = 0"; 
             using (SqlCommand cmd = new SqlCommand(query, connection))
             {
                 cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
@@ -79,39 +79,11 @@ namespace point_of_sale_system.DAL
             return products;
         }
 
-        //public List<Product> SearchProducts(string searchTerm)
-        //{
-        //    List<Product> products = new List<Product>();
-        //    OpenConnection();
-        //    string query = "SELECT * FROM Product WHERE name LIKE @search OR category LIKE @search";
-        //    using (SqlCommand cmd = new SqlCommand(query, connection))
-        //    {
-        //        cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
-        //        using (SqlDataReader reader = cmd.ExecuteReader())
-        //        {
-        //            while (reader.Read())
-        //            {
-        //                products.Add(new Product
-        //                {
-        //                    id = (int)reader["id"],
-        //                    name = reader["name"].ToString(),
-        //                    category = reader["category"].ToString(),
-        //                    unit_price = (decimal)reader["unit_price"],
-        //                    purchase_price = (decimal)reader["purchase_price"],
-        //                    quantity = (int)reader["quantity"]
-        //                });
-        //            }
-        //        }
-        //    }
-        //    CloseConnection();
-        //    return products;
-        //}
-
         public List<Product> GetAllProducts()
         {
             List<Product> products = new List<Product>();
             OpenConnection();
-            string query = "SELECT * FROM Product WHERE IsDeleted = 0"; // Only non-deleted products
+            string query = "SELECT * FROM Product WHERE IsDeleted = 0"; 
             using (SqlCommand cmd = new SqlCommand(query, connection))
             using (SqlDataReader reader = cmd.ExecuteReader())
             {

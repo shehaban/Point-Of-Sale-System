@@ -15,7 +15,7 @@ namespace point_of_sale_system.Models
         public int FailedAttempts { get; set; }
         public DateTime? LastAttempt { get; set; }
         public bool IsLocked { get; set; }
-        public bool IsDeleted { get; set; } // Add this line
+        public bool IsDeleted { get; set; } 
 
     }
 }

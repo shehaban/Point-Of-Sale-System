@@ -31,15 +31,12 @@ namespace point_of_sale_system
 
         private void InitializeRoleBasedAccess()
         {
-            // Disable all controls if not admin
             if (!currentUserRole.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
                 button6.Enabled = false;
-                button5.Enabled = false;  // Password field
-                button4.Enabled = false;  // Confirm password
+                button5.Enabled = false;  
+                button4.Enabled = false;  
 
-
-                // Show access denied message
                 MessageBox.Show("Only administrators can access user management",
                               "Access Denied",
                               MessageBoxButtons.OK,
@@ -62,14 +59,12 @@ namespace point_of_sale_system
 
         private void SetUnderlinedButton(Button activeButton)
         {
-            // List of buttons in your toggle group
             Button[] buttons = { button4, button5, button6 };
 
             foreach (Button btn in buttons)
             {
                 if (btn == activeButton)
                 {
-                    // Underline the clicked button (if not already underlined)
                     if (!btn.Font.Style.HasFlag(FontStyle.Underline))
                     {
                         btn.Font = new Font(btn.Font, btn.Font.Style | FontStyle.Underline);
@@ -77,7 +72,6 @@ namespace point_of_sale_system
                 }
                 else
                 {
-                    // Remove underline from other buttons
                     if (btn.Font.Style.HasFlag(FontStyle.Underline))
                     {
                         btn.Font = new Font(btn.Font, btn.Font.Style & ~FontStyle.Underline);
@@ -85,9 +79,6 @@ namespace point_of_sale_system
                 }
             }
         }
-
-
-
         private void button6_Click_1(object sender, EventArgs e)
         {
             showUserControl(new AddUser());

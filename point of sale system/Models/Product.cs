@@ -14,6 +14,6 @@ namespace point_of_sale_system.Models
         public decimal unit_price { get; set; }
         public decimal purchase_price { get; set; }
         public int quantity { get; set; }
-        public bool IsDeleted { get; set; } // Add this property
+        public bool IsDeleted { get; set; } 
     }
 }

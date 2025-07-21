@@ -34,13 +34,14 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.homebtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mngbtn
             // 
             this.mngbtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.mngbtn.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mngbtn.Location = new System.Drawing.Point(12, 442);
+            this.mngbtn.Location = new System.Drawing.Point(12, 364);
             this.mngbtn.Name = "mngbtn";
             this.mngbtn.Size = new System.Drawing.Size(184, 95);
             this.mngbtn.TabIndex = 9;
@@ -52,7 +53,7 @@
             // 
             this.btnSalesMng.BackColor = System.Drawing.Color.Lavender;
             this.btnSalesMng.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalesMng.Location = new System.Drawing.Point(12, 294);
+            this.btnSalesMng.Location = new System.Drawing.Point(12, 250);
             this.btnSalesMng.Name = "btnSalesMng";
             this.btnSalesMng.Size = new System.Drawing.Size(184, 98);
             this.btnSalesMng.TabIndex = 8;
@@ -64,7 +65,7 @@
             // 
             this.btnInventory.BackColor = System.Drawing.Color.PaleGreen;
             this.btnInventory.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.Location = new System.Drawing.Point(12, 150);
+            this.btnInventory.Location = new System.Drawing.Point(12, 130);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(184, 98);
             this.btnInventory.TabIndex = 7;
@@ -97,7 +98,7 @@
             this.homebtn.BackColor = System.Drawing.Color.Red;
             this.homebtn.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homebtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.homebtn.Location = new System.Drawing.Point(12, 583);
+            this.homebtn.Location = new System.Drawing.Point(12, 593);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(184, 95);
             this.homebtn.TabIndex = 11;
@@ -105,11 +106,24 @@
             this.homebtn.UseVisualStyleBackColor = false;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 481);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 95);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Recived Messages";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // saleMngFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 721);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.homebtn);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.mngbtn);
@@ -130,5 +144,6 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button homebtn;
+        private System.Windows.Forms.Button button1;
     }
 }
