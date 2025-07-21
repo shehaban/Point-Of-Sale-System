@@ -188,7 +188,42 @@ namespace point_of_sale_system.DAL
             }
             return dt;
         }
-        public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
+
+        public DataTable SearchOnProducts(string searchTerm)
+        {
+                DataTable results = new DataTable();
+
+                try
+                {
+                    OpenConnection();
+                    string query = @"SELECT id, name, unit_price 
+                        FROM Product 
+                        WHERE name LIKE @searchTerm + '%'
+                        AND IsDeleted = 0
+                        ORDER BY name";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@searchTerm", searchTerm);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(results);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error searching products", ex);
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+
+                return results;
+            }
+            public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
         {
             Product product = null;
             OpenConnection();
@@ -267,7 +302,68 @@ namespace point_of_sale_system.DAL
     }
 }
 
-public bool UpdateInvProduct(Product product)
+        public decimal GetProductPurchasePrice(int productId)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "SELECT purchase_price FROM Product WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", productId);
+                    return Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public bool UpdateProductQuantity(int productId, int quantityChange)
+        {
+            try
+            {
+                OpenConnection();
+                string query = @"UPDATE Product 
+                       SET quantity = quantity + @quantityChange 
+                       WHERE id = @id AND IsDeleted = 0";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@quantityChange", quantityChange);
+                    cmd.Parameters.AddWithValue("@id", productId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public int GetProductQuantity(int productId)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "SELECT quantity FROM Product WHERE id = @id AND IsDeleted = 0";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", productId);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public bool UpdateInvProduct(Product product)
 {
     try
     {

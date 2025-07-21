@@ -18,6 +18,13 @@ namespace point_of_sale_system
             // Check authorization on load
             if (!UserSession.CurrentUserRole.Equals("Admin", StringComparison.OrdinalIgnoreCase))
             {
+                btnAdd.Enabled = false;
+                btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
+                btnSearch.Enabled = false;
+                txtSearch.Enabled = false;
+                button5.Enabled = false;
+
                 MessageBox.Show("Access Denied: Only Administrators can manage products",
                               "Security Warning",
                               MessageBoxButtons.OK,

@@ -13,5 +13,7 @@ namespace point_of_sale_system.Models
         public int ProductId { get; set; }
         public int QuantitySold { get; set; }
         public decimal TotalPrice { get; set; }
+        public DateTime SaleDate { get; set; }
+
     }
 }

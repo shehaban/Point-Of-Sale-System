@@ -32,13 +32,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.qnttxt = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnUp = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCart = new System.Windows.Forms.DataGridView();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -51,12 +51,14 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.homebtn = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -71,7 +73,6 @@
             this.button2.TabIndex = 78;
             this.button2.Text = "Quick List";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -109,16 +110,16 @@
             this.label1.TabIndex = 75;
             this.label1.Text = "Quantity";
             // 
-            // qnttxt
+            // txtQuantity
             // 
-            this.qnttxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qnttxt.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qnttxt.Location = new System.Drawing.Point(1263, 55);
-            this.qnttxt.Multiline = true;
-            this.qnttxt.Name = "qnttxt";
-            this.qnttxt.ReadOnly = true;
-            this.qnttxt.Size = new System.Drawing.Size(513, 87);
-            this.qnttxt.TabIndex = 74;
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantity.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(1263, 55);
+            this.txtQuantity.Multiline = true;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.ReadOnly = true;
+            this.txtQuantity.Size = new System.Drawing.Size(513, 87);
+            this.txtQuantity.TabIndex = 74;
             // 
             // button18
             // 
@@ -146,31 +147,31 @@
             this.button17.Text = "New Invoice";
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // btnDown
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(825, 368);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(116, 152);
-            this.button15.TabIndex = 70;
-            this.button15.Text = "⬇";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
+            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDown.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Location = new System.Drawing.Point(825, 368);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(116, 152);
+            this.btnDown.TabIndex = 70;
+            this.btnDown.Text = "⬇";
+            this.btnDown.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDown.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // btnUp
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(825, 178);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(116, 152);
-            this.button14.TabIndex = 69;
-            this.button14.Text = "⬆";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.UseVisualStyleBackColor = false;
+            this.btnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
+            this.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUp.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Location = new System.Drawing.Point(825, 178);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(116, 152);
+            this.btnUp.TabIndex = 69;
+            this.btnUp.Text = "⬆";
+            this.btnUp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUp.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
@@ -184,18 +185,18 @@
             this.button13.TabIndex = 68;
             this.button13.Text = "Sale";
             this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
-            // dataGridView1
+            // dataGridViewCart
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(762, 775);
-            this.dataGridView1.TabIndex = 67;
+            this.dataGridViewCart.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCart.Location = new System.Drawing.Point(27, 341);
+            this.dataGridViewCart.Name = "dataGridViewCart";
+            this.dataGridViewCart.RowHeadersWidth = 51;
+            this.dataGridViewCart.RowTemplate.Height = 26;
+            this.dataGridViewCart.Size = new System.Drawing.Size(762, 555);
+            this.dataGridViewCart.TabIndex = 67;
+            this.dataGridViewCart.SelectionChanged += new System.EventHandler(this.dataGridViewCart_SelectionChanged);
             // 
             // button11
             // 
@@ -354,39 +355,38 @@
             this.homebtn.UseVisualStyleBackColor = false;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
-            // button16
+            // btnRemove
             // 
-            this.button16.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
-            this.button16.Location = new System.Drawing.Point(825, 564);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(116, 115);
-            this.button16.TabIndex = 71;
-            this.button16.UseVisualStyleBackColor = true;
+            this.btnRemove.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
+            this.btnRemove.Location = new System.Drawing.Point(825, 564);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(116, 115);
+            this.btnRemove.TabIndex = 71;
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(27, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(562, 71);
-            this.textBox1.TabIndex = 80;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(27, 44);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(562, 71);
+            this.txtSearch.TabIndex = 80;
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(595, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 71);
-            this.button3.TabIndex = 81;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(595, 44);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(194, 71);
+            this.btnSearch.TabIndex = 81;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -399,16 +399,27 @@
             this.label2.TabIndex = 82;
             this.label2.Text = "Total Price:";
             // 
-            // textBox2
+            // txtTotalPrice
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Red;
-            this.textBox2.Location = new System.Drawing.Point(353, 905);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(352, 75);
-            this.textBox2.TabIndex = 84;
-            this.textBox2.Text = "999.99";
+            this.txtTotalPrice.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.txtTotalPrice.Location = new System.Drawing.Point(353, 905);
+            this.txtTotalPrice.Multiline = true;
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(436, 75);
+            this.txtTotalPrice.TabIndex = 84;
+            this.txtTotalPrice.Text = "999.99";
+            // 
+            // ProductsDataGridView
+            // 
+            this.ProductsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.ProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDataGridView.Location = new System.Drawing.Point(27, 122);
+            this.ProductsDataGridView.Name = "ProductsDataGridView";
+            this.ProductsDataGridView.RowHeadersWidth = 51;
+            this.ProductsDataGridView.RowTemplate.Height = 26;
+            this.ProductsDataGridView.Size = new System.Drawing.Size(762, 208);
+            this.ProductsDataGridView.TabIndex = 85;
             // 
             // saleFrm
             // 
@@ -416,23 +427,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.ClientSize = new System.Drawing.Size(1850, 992);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ProductsDataGridView);
+            this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.homebtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.qnttxt);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
             this.Controls.Add(this.button13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.btn1);
@@ -446,7 +458,9 @@
             this.Controls.Add(this.btn9);
             this.Name = "saleFrm";
             this.Text = "saleFrm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.saleFrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,14 +472,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox qnttxt;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCart;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btn1;
@@ -478,9 +492,10 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button homebtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.DataGridView ProductsDataGridView;
     }
 }

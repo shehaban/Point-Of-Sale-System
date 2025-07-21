@@ -1,4 +1,5 @@
-﻿using System;
+﻿using point_of_sale_system.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace point_of_sale_system
 {
     public partial class saleMngFrm : Form
     {
+        private SaleInfo sharedSaleInfo; // shared instance
+        public SaleInfo SharedSaleInfo => sharedSaleInfo; // public getter
         private List<Button> navButtons;
         private string currentUserRole; // Add this field
         public saleMngFrm(string role)
@@ -34,6 +37,15 @@ namespace point_of_sale_system
 
             activeButton.BackColor = Color.SteelBlue; 
         }
+
+        public void SharedSaleInfo_ClickFake()
+        {
+            if (sharedSaleInfo == null)
+            {
+                sharedSaleInfo = new SaleInfo();
+            }
+        }
+
 
         public void showUserControl(UserControl userControl)
         {
@@ -58,7 +70,10 @@ namespace point_of_sale_system
 
         private void btnSalesMng_Click(object sender, EventArgs e)
         {
-            showUserControl(new SaleInfo());
+            if (sharedSaleInfo == null)
+                sharedSaleInfo = new SaleInfo();
+
+            showUserControl(sharedSaleInfo); // استخدم نفس النسخة
             SetActiveButton(btnSalesMng);
         }
 
@@ -70,7 +85,7 @@ namespace point_of_sale_system
 
         private void homebtn_Click(object sender, EventArgs e)
         {
-            mainFrm mainForm = new mainFrm();
+            mainFrm mainForm = new mainFrm(UserSession.CurrentUserRole);
             mainForm.Show();
             this.Close();
         }

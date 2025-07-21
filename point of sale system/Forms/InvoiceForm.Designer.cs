@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblDateTime = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblInvoiceNumber = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.invoiceDataGridView = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // lblTotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(325, 557);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 24);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "899";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(325, 557);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 24);
+            this.lblTotal.TabIndex = 23;
             // 
             // label4
             // 
@@ -62,32 +61,32 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Total DL :";
             // 
-            // label5
+            // lblInvoiceNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(332, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 22);
-            this.label5.TabIndex = 21;
+            this.lblInvoiceNumber.AutoSize = true;
+            this.lblInvoiceNumber.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(332, 187);
+            this.lblInvoiceNumber.Name = "lblInvoiceNumber";
+            this.lblInvoiceNumber.Size = new System.Drawing.Size(0, 22);
+            this.lblInvoiceNumber.TabIndex = 21;
             // 
-            // lblDateTime
+            // lblDate
             // 
-            this.lblDateTime.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.Location = new System.Drawing.Point(325, 135);
-            this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(137, 38);
-            this.lblDateTime.TabIndex = 20;
+            this.lblDate.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(247, 135);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(137, 38);
+            this.lblDate.TabIndex = 20;
             // 
-            // dataGridView1
+            // invoiceDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 252);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(388, 275);
-            this.dataGridView1.TabIndex = 19;
+            this.invoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoiceDataGridView.Location = new System.Drawing.Point(100, 252);
+            this.invoiceDataGridView.Name = "invoiceDataGridView";
+            this.invoiceDataGridView.RowHeadersWidth = 51;
+            this.invoiceDataGridView.RowTemplate.Height = 26;
+            this.invoiceDataGridView.Size = new System.Drawing.Size(388, 275);
+            this.invoiceDataGridView.TabIndex = 19;
             // 
             // label3
             // 
@@ -141,7 +140,7 @@
             this.button1.TabIndex = 63;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 
@@ -154,6 +153,7 @@
             this.btnAdd.TabIndex = 64;
             this.btnAdd.Text = "Cash";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // InvoiceForm
             // 
@@ -164,16 +164,16 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblDateTime);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblInvoiceNumber);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.invoiceDataGridView);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "InvoiceForm";
             this.Text = "InvoiceForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,11 +181,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblDateTime;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblInvoiceNumber;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.DataGridView invoiceDataGridView;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
