@@ -188,6 +188,41 @@ namespace point_of_sale_system.DAL
             }
             return dt;
         }
+
+        public DataTable SearchOnProducts(string searchTerm)
+        {
+                DataTable results = new DataTable();
+
+                try
+                {
+                    OpenConnection();
+                    string query = @"SELECT id, name, unit_price 
+                        FROM Product 
+                        WHERE name LIKE @searchTerm + '%'
+                        AND IsDeleted = 0
+                        ORDER BY name";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@searchTerm", searchTerm);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(results);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error searching products", ex);
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+
+                return results;
+            }
         public Product GetProductByNameCategoryAndPrice(string name, string category, decimal unitPrice)
         {
             Product product = null;
@@ -221,76 +256,137 @@ namespace point_of_sale_system.DAL
         }
 
         public int AddProductWithInventory(Product product)
-{
-    try
-    {
-        OpenConnection();
-        using (SqlTransaction transaction = connection.BeginTransaction())
         {
             try
             {
-                // 1. Add the product
-                string productQuery = @"INSERT INTO Product (name, category, unit_price, purchase_price, quantity) 
-                                     VALUES (@name, @category, @unit_price, @purchase_price, @quantity);
-                                     SELECT SCOPE_IDENTITY();";
-                
-                SqlCommand productCmd = new SqlCommand(productQuery, connection, transaction);
-                productCmd.Parameters.AddWithValue("@name", product.name);
-                productCmd.Parameters.AddWithValue("@category", product.category);
-                productCmd.Parameters.AddWithValue("@unit_price", product.unit_price);
-                productCmd.Parameters.AddWithValue("@purchase_price", product.purchase_price);
-                productCmd.Parameters.AddWithValue("@quantity", product.quantity);
-                
-                int newProductId = Convert.ToInt32(productCmd.ExecuteScalar());
-                
-                // 2. Add to Inventory table with default reorder level (2)
-                string inventoryQuery = @"INSERT INTO Inventory (product_id, reorder_level) 
-                                       VALUES (@product_id, 2)";
-                
-                SqlCommand inventoryCmd = new SqlCommand(inventoryQuery, connection, transaction);
-                inventoryCmd.Parameters.AddWithValue("@product_id", newProductId);
-                inventoryCmd.ExecuteNonQuery();
-                
-                transaction.Commit();
-                return newProductId;
+                OpenConnection();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // 1. Add the product
+                        string productQuery = @"INSERT INTO Product (name, category, unit_price, purchase_price, quantity) 
+                                             VALUES (@name, @category, @unit_price, @purchase_price, @quantity);
+                                             SELECT SCOPE_IDENTITY();";
+
+                        SqlCommand productCmd = new SqlCommand(productQuery, connection, transaction);
+                        productCmd.Parameters.AddWithValue("@name", product.name);
+                        productCmd.Parameters.AddWithValue("@category", product.category);
+                        productCmd.Parameters.AddWithValue("@unit_price", product.unit_price);
+                        productCmd.Parameters.AddWithValue("@purchase_price", product.purchase_price);
+                        productCmd.Parameters.AddWithValue("@quantity", product.quantity);
+
+                        int newProductId = Convert.ToInt32(productCmd.ExecuteScalar());
+
+                        // 2. Add to Inventory table with default reorder level (2)
+                        string inventoryQuery = @"INSERT INTO Inventory (product_id, reorder_level) 
+                                               VALUES (@product_id, 2)";
+
+                        SqlCommand inventoryCmd = new SqlCommand(inventoryQuery, connection, transaction);
+                        inventoryCmd.Parameters.AddWithValue("@product_id", newProductId);
+                        inventoryCmd.ExecuteNonQuery();
+
+                        transaction.Commit();
+                        return newProductId;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
-            catch
+            finally
             {
-                transaction.Rollback();
-                throw;
+                CloseConnection();
             }
         }
-    }
-    finally
-    {
-        CloseConnection();
-    }
-}
 
-public bool UpdateInvProduct(Product product)
-{
-    try
-    {
-        OpenConnection();
-        string query = @"UPDATE Product 
+        public decimal GetProductPurchasePrice(int productId)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "SELECT purchase_price FROM Product WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", productId);
+                    return Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public bool UpdateProductQuantity(int productId, int quantityChange)
+        {
+            try
+            {
+                OpenConnection();
+                string query = @"UPDATE Product 
+                       SET quantity = quantity + @quantityChange 
+                       WHERE id = @id AND IsDeleted = 0";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@quantityChange", quantityChange);
+                    cmd.Parameters.AddWithValue("@id", productId);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public int GetProductQuantity(int productId)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "SELECT quantity FROM Product WHERE id = @id AND IsDeleted = 0";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", productId);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public bool UpdateInvProduct(Product product)
+        {
+            try
+            {
+                OpenConnection();
+                string query = @"UPDATE Product 
                        SET quantity = @quantity 
                        WHERE id = @id";
-        
-        using (SqlCommand cmd = new SqlCommand(query, connection))
-        {
-            cmd.Parameters.AddWithValue("@quantity", product.quantity);
-            cmd.Parameters.AddWithValue("@id", product.id);
-            
-            int rowsAffected = cmd.ExecuteNonQuery();
-            return rowsAffected > 0;
-        }
-    }
-    finally
-    {
-        CloseConnection();
-    }
-}
 
-        
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@quantity", product.quantity);
+                    cmd.Parameters.AddWithValue("@id", product.id);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+
     }
 }

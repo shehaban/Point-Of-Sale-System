@@ -39,3 +39,37 @@ CREATE TABLE Inventory (
     product_id INT NOT NULL FOREIGN KEY REFERENCES Product(id),
     reorder_level INT DEFAULT 2
 );
+use pos;
+select * from Users;
+
+UPDATE Inventory SET reorder_level = 2 WHERE reorder_level IS NULL;
+
+-- Or for all products:
+INSERT INTO Inventory (product_id, reorder_level)
+SELECT id, 2 FROM Product
+WHERE id NOT IN (SELECT product_id FROM Inventory);
+
+INSERT INTO Inventory (product_id, reorder_level)
+SELECT id, 2 FROM Product
+WHERE id NOT IN (SELECT product_id FROM Inventory);
+
+ALTER TABLE Product 
+ADD IsDeleted BIT NOT NULL DEFAULT 0;
+
+ALTER TABLE Users 
+ADD IsDeleted BIT NOT NULL DEFAULT 0;
+
+use pos;
+select * from Returns;
+ALTER TABLE Sales
+ADD sale_date DATETIME NOT NULL DEFAULT GETDATE();
+
+CREATE TABLE Returns (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    invoice_id INT NOT NULL FOREIGN KEY REFERENCES Invoices(id),
+    product_id INT NOT NULL FOREIGN KEY REFERENCES Product(id),
+    quantity INT NOT NULL,
+    returned_amount DECIMAL(10,2) NOT NULL,
+    profit_deduction DECIMAL(10,2) NOT NULL,
+    return_date DATETIME DEFAULT GETDATE()
+);

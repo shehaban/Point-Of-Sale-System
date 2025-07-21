@@ -8,7 +8,10 @@ namespace point_of_sale_system.DAL
     public class DbHelper : IDisposable
     {
         protected string connectionString = "Server=DESKTOP-3P19VR9;Database=pos;Trusted_Connection=True;";
-        protected SqlConnection connection;
+        public SqlConnection connection;
+        public SqlTransaction transaction;
+
+
 
         public DbHelper()
         {
@@ -37,6 +40,24 @@ namespace point_of_sale_system.DAL
             {
                 connection.Close();
             }
+        }
+
+        public void BeginTransaction()
+        {
+            OpenConnection();
+            transaction = connection.BeginTransaction();
+        }
+
+        public void CommitTransaction()
+        {
+            transaction?.Commit();
+            transaction = null;
+        }
+
+        public void RollbackTransaction()
+        {
+            transaction?.Rollback();
+            transaction = null;
         }
 
         public void Dispose()
