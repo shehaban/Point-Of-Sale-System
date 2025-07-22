@@ -35,8 +35,6 @@
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.button18 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.btnDown = new System.Windows.Forms.Button();
-            this.btnUp = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
             this.button11 = new System.Windows.Forms.Button();
@@ -51,12 +49,14 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.homebtn = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -146,32 +146,6 @@
             this.button17.TabIndex = 72;
             this.button17.Text = "New Invoice";
             this.button17.UseVisualStyleBackColor = false;
-            // 
-            // btnDown
-            // 
-            this.btnDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDown.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDown.Location = new System.Drawing.Point(825, 368);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(116, 152);
-            this.btnDown.TabIndex = 70;
-            this.btnDown.Text = "⬇";
-            this.btnDown.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDown.UseVisualStyleBackColor = false;
-            // 
-            // btnUp
-            // 
-            this.btnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
-            this.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUp.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(825, 178);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(116, 152);
-            this.btnUp.TabIndex = 69;
-            this.btnUp.Text = "⬆";
-            this.btnUp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUp.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
@@ -355,16 +329,6 @@
             this.homebtn.UseVisualStyleBackColor = false;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
-            // btnRemove
-            // 
-            this.btnRemove.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
-            this.btnRemove.Location = new System.Drawing.Point(825, 564);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(116, 115);
-            this.btnRemove.TabIndex = 71;
-            this.btnRemove.UseVisualStyleBackColor = true;
-            // 
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -420,6 +384,42 @@
             this.ProductsDataGridView.RowTemplate.Height = 26;
             this.ProductsDataGridView.Size = new System.Drawing.Size(762, 208);
             this.ProductsDataGridView.TabIndex = 85;
+            // 
+            // btnUp
+            // 
+            this.btnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
+            this.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUp.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUp.Location = new System.Drawing.Point(825, 178);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(116, 152);
+            this.btnUp.TabIndex = 69;
+            this.btnUp.Text = "⬆";
+            this.btnUp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUp.UseVisualStyleBackColor = false;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Font = new System.Drawing.Font("Tahoma", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Image = global::point_of_sale_system.Properties.Resources.delete_icon__2_;
+            this.btnRemove.Location = new System.Drawing.Point(825, 564);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(116, 115);
+            this.btnRemove.TabIndex = 71;
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnDown
+            // 
+            this.btnDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
+            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDown.Font = new System.Drawing.Font("Tahoma", 79.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDown.Location = new System.Drawing.Point(825, 368);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(116, 152);
+            this.btnDown.TabIndex = 70;
+            this.btnDown.Text = "⬇";
+            this.btnDown.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDown.UseVisualStyleBackColor = false;
             // 
             // saleFrm
             // 

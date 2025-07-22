@@ -12,7 +12,7 @@ namespace point_of_sale_system
 
         public Edit()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         internal Edit(Product productToEdit) : this()
@@ -33,45 +33,81 @@ namespace point_of_sale_system
             txtSellPrice.Text = product.unit_price.ToString("0.00");
             txtPurchasePrice.Text = product.purchase_price.ToString("0.00");
             txtQuantity.Text = product.quantity.ToString();
+
+            // إزالة الأخطاء القديمة عند تحميل البيانات
+            errorProvider1.SetError(txtName, "");
+            errorProvider1.SetError(txtCategory, "");
+            errorProvider1.SetError(txtSellPrice, "");
+            errorProvider1.SetError(txtPurchasePrice, "");
+            errorProvider1.SetError(txtQuantity, "");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            bool isValid = true;
+
+            // Validate Name
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                MessageBox.Show("Please enter product name", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtName.Focus();
-                return;
+                errorProvider1.SetError(txtName, "Please enter product name");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtName, "");
             }
 
+            // Validate Category
             if (string.IsNullOrWhiteSpace(txtCategory.Text))
             {
-                MessageBox.Show("Please enter product category", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCategory.Focus();
-                return;
+                errorProvider1.SetError(txtCategory, "Please enter product category");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtCategory, "");
             }
 
+            // Validate Sell Price
             if (!decimal.TryParse(txtSellPrice.Text, out decimal sellPrice) || sellPrice <= 0)
             {
-                MessageBox.Show("Please enter a valid sell price", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSellPrice.Focus();
-                return;
+                errorProvider1.SetError(txtSellPrice, "Please enter a valid sell price");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtSellPrice, "");
             }
 
+            // Validate Purchase Price
             if (!decimal.TryParse(txtPurchasePrice.Text, out decimal purchasePrice) || purchasePrice <= 0)
             {
-                MessageBox.Show("Please enter a valid purchase price", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtPurchasePrice.Focus();
-                return;
+                errorProvider1.SetError(txtPurchasePrice, "Please enter a valid purchase price");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtPurchasePrice, "");
             }
 
+            // Validate Quantity
             if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
             {
-                MessageBox.Show("Please enter a valid quantity", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtQuantity.Focus();
+                errorProvider1.SetError(txtQuantity, "Please enter a valid quantity");
+                isValid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(txtQuantity, "");
+            }
+
+            if (!isValid)
+            {
+                // إذا كان هناك خطأ فلا تنفذ عملية الحفظ
                 return;
             }
 
+            // تحديث بيانات المنتج
             product.name = txtName.Text.Trim();
             product.category = txtCategory.Text.Trim();
             product.unit_price = sellPrice;

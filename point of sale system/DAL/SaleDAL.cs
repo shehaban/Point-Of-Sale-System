@@ -60,6 +60,37 @@ namespace point_of_sale_system.DAL
             return ExecuteDataTable(query);
         }
 
+        public DataTable GetReturnSummaryByDateRange(DateTime fromDate, DateTime toDate)
+        {
+            string query = @"
+        SELECT 
+            ISNULL(SUM(returned_amount), 0) AS returned_amount,
+            ISNULL(SUM(profit_deduction), 0) AS profit_deduction
+        FROM Returns
+        WHERE CAST(return_date AS DATE) BETWEEN @fromDate AND @toDate";
+
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@fromDate", fromDate.Date);
+                    cmd.Parameters.AddWithValue("@toDate", toDate.Date);
+
+                    DataTable table = new DataTable();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(table);
+                    }
+                    return table;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
         public DataTable GetReturnSummary()
         {
             string query = @"

@@ -104,15 +104,6 @@ namespace point_of_sale_system.Controls
                 }
             });
 
-            dgvMessages.Columns.Add(new DataGridViewCheckBoxColumn()
-            {
-                DataPropertyName = "IsRead",
-                HeaderText = "Read",
-                Width = 60,
-                MinimumWidth = 60,
-                FillWeight = 8
-            });
-
             dgvMessages.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 DataPropertyName = "CreatedAt",

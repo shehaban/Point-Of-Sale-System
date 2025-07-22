@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.txtSellPrice = new System.Windows.Forms.TextBox();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -186,6 +189,10 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -207,6 +214,7 @@
             this.Controls.Add(this.btnSave);
             this.Name = "Edit";
             this.Text = "Edit";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +236,6 @@
         private System.Windows.Forms.TextBox txtSellPrice;
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

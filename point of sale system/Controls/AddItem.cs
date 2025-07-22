@@ -16,40 +16,43 @@ namespace point_of_sale_system
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            // Clear any previous errors
+            errorProvider1.Clear();
+
+            bool hasError = false;
+
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                MessageBox.Show("Please enter product name", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtName.Focus();
-                return;
+                errorProvider1.SetError(txtName, "Please enter product name");
+                hasError = true;
             }
 
             if (string.IsNullOrWhiteSpace(txtCategory.Text))
             {
-                MessageBox.Show("Please enter product category", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCategory.Focus();
-                return;
+                errorProvider1.SetError(txtCategory, "Please enter product category");
+                hasError = true;
             }
 
             if (!decimal.TryParse(txtSellPrice.Text, out decimal sellPrice) || sellPrice <= 0)
             {
-                MessageBox.Show("Please enter a valid sell price", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSellPrice.Focus();
-                return;
+                errorProvider1.SetError(txtSellPrice, "Enter a valid sell price greater than 0");
+                hasError = true;
             }
 
             if (!decimal.TryParse(txtPurchasePrice.Text, out decimal purchasePrice) || purchasePrice <= 0)
             {
-                MessageBox.Show("Please enter a valid purchase price", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtPurchasePrice.Focus();
-                return;
+                errorProvider1.SetError(txtPurchasePrice, "Enter a valid purchase price greater than 0");
+                hasError = true;
             }
 
             if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
             {
-                MessageBox.Show("Please enter a valid quantity", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtQuantity.Focus();
-                return;
+                errorProvider1.SetError(txtQuantity, "Enter a valid quantity (0 or more)");
+                hasError = true;
             }
+
+            if (hasError)
+                return;
 
             try
             {

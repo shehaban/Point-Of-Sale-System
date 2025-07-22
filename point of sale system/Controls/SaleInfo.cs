@@ -109,21 +109,37 @@ namespace point_of_sale_system
                 DateTime fromDate = dateTimePickerFrom.Value.Date;
                 DateTime toDate = dateTimePickerTo.Value.Date;
 
+                // Get fresh data with date filtering
                 DataTable salesData = saleDAL.GetSalesByDateRange(fromDate, toDate);
+                DataTable returnData = saleDAL.GetReturnSummaryByDateRange(fromDate, toDate);
+
+                // Initialize all values to 0
+                decimal totalSales = 0m;
+                decimal totalReturns = 0m;
+                decimal netProfit = 0m;
+                decimal profitDeductions = 0m;
+
+                // Calculate values only if we have data
+                if (salesData.Rows.Count > 0)
+                {
+                    totalSales = saleDAL.GetTotalSalesAmount(fromDate, toDate);
+                    netProfit = saleDAL.GetNetProfitByDateRange(fromDate, toDate);
+                }
+
+                if (returnData.Rows.Count > 0)
+                {
+                    totalReturns = Convert.ToDecimal(returnData.Rows[0]["returned_amount"]);
+                    profitDeductions = Convert.ToDecimal(returnData.Rows[0]["profit_deduction"]);
+                }
+
+                // Update UI
                 Reportdgv.DataSource = salesData;
                 FormatDailySalesGrid();
 
-                decimal totalSales = saleDAL.GetTotalSalesAmount(fromDate, toDate);
-                decimal returns = saleDAL.GetReturnSummary().AsEnumerable()
-                                 .Sum(row => Convert.ToDecimal(row["returned_amount"]));
-
-                decimal netProfit = saleDAL.GetNetProfitByDateRange(fromDate, toDate);
-                decimal profitDeductions = saleDAL.GetReturnSummary().AsEnumerable()
-                                          .Sum(row => Convert.ToDecimal(row["profit_deduction"]));
-
-                txtTotalAmount.Text = (totalSales - returns).ToString("0.00");
+                // Set the values
+                txtTotalAmount.Text = (totalSales - totalReturns).ToString("0.00");
                 txtNetProfit.Text = (netProfit - profitDeductions).ToString("0.00");
-                txtTotalReturn.Text = returns.ToString("0.00");
+                txtTotalReturn.Text = totalReturns.ToString("0.00");
             }
             catch (Exception ex)
             {
@@ -137,7 +153,6 @@ namespace point_of_sale_system
                 Cursor.Current = Cursors.Default;
             }
         }
-
         private void FormatDailySalesGrid()
         {
             if (Reportdgv.Columns.Count > 0)

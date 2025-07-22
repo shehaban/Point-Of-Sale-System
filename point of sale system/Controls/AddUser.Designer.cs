@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -118,6 +121,7 @@
             // 
             // cmbRole
             // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
@@ -138,6 +142,10 @@
             this.txtUsername.Size = new System.Drawing.Size(464, 43);
             this.txtUsername.TabIndex = 0;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -153,6 +161,7 @@
             this.Controls.Add(this.txtUsername);
             this.Name = "AddUser";
             this.Size = new System.Drawing.Size(842, 602);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +177,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -45,37 +45,49 @@ namespace point_of_sale_system.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear(); // حذف كل الأخطاء السابقة
+
+            bool hasError = false;
+
             if (cmbUsers.SelectedItem == null)
             {
-                MessageBox.Show("Please select a user to edit");
-                return;
+                errorProvider1.SetError(cmbUsers, "Please select a user to edit.");
+                hasError = true;
             }
 
-            DataRowView selectedRow = (DataRowView)cmbUsers.SelectedItem;
-            string originalUsername = selectedRow["Username"].ToString();
+            string originalUsername = cmbUsers.SelectedValue?.ToString();
             string newUsername = txtUsername.Text.Trim();
             string newPassword = txtNewPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
-            string role = cmbRole.SelectedItem.ToString();
+            string role = cmbRole.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(newUsername))
             {
-                MessageBox.Show("Please enter a username");
-                return;
+                errorProvider1.SetError(txtUsername, "Username is required.");
+                hasError = true;
             }
 
             if (!string.IsNullOrEmpty(newPassword) && newPassword != confirmPassword)
             {
-                MessageBox.Show("Passwords do not match!");
-                return;
+                errorProvider1.SetError(txtConfirmPassword, "Passwords do not match.");
+                hasError = true;
+            }
+
+            if (string.IsNullOrEmpty(role))
+            {
+                errorProvider1.SetError(cmbRole, "Please select a role.");
+                hasError = true;
             }
 
             if (!newUsername.Equals(originalUsername, StringComparison.OrdinalIgnoreCase) &&
                 !_userDal.IsUsernameAvailable(newUsername, originalUsername))
             {
-                MessageBox.Show("Username already exists. Please choose a different username.");
-                return;
+                errorProvider1.SetError(txtUsername, "Username already exists.");
+                hasError = true;
             }
+
+            if (hasError)
+                return;
 
             var updatedUser = new User
             {
@@ -91,7 +103,7 @@ namespace point_of_sale_system.Forms
             if (_userDal.UpdateUser(originalUsername, updatedUser))
             {
                 MessageBox.Show("User updated successfully!");
-                LoadUsers(); 
+                LoadUsers();
                 ClearFields();
             }
             else
@@ -100,6 +112,7 @@ namespace point_of_sale_system.Forms
             }
         }
 
+
         private void ClearFields()
         {
             txtUsername.Clear();
@@ -107,6 +120,7 @@ namespace point_of_sale_system.Forms
             txtConfirmPassword.Clear();
             cmbRole.SelectedIndex = -1;
             cmbUsers.SelectedIndex = -1;
+            errorProvider1.Clear();
         }
     }
 }

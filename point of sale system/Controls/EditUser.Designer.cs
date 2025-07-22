@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.cmbUsers = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -45,7 +48,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAdd.Location = new System.Drawing.Point(314, 384);
+            this.btnAdd.Location = new System.Drawing.Point(314, 380);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(231, 68);
             this.btnAdd.TabIndex = 4;
@@ -119,6 +122,7 @@
             // 
             // cmbRole
             // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
@@ -148,6 +152,10 @@
             this.cmbUsers.Size = new System.Drawing.Size(213, 36);
             this.cmbUsers.TabIndex = 5;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // EditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -164,6 +172,7 @@
             this.Controls.Add(this.txtUsername);
             this.Name = "EditUser";
             this.Size = new System.Drawing.Size(1105, 573);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +189,6 @@
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.ComboBox cmbUsers;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

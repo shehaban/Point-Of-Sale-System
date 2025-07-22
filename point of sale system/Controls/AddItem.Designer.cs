@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtPurchasePrice = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -186,6 +189,10 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Add Item";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -207,6 +214,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "AddItem";
             this.Text = "AddItem";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +236,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

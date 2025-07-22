@@ -86,9 +86,6 @@ namespace point_of_sale_system.DAL
             }
         }
 
-
-
-
         public class BaseApiResponse
         {
             public bool success { get; set; }

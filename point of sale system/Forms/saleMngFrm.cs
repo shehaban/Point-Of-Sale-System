@@ -23,7 +23,7 @@ namespace point_of_sale_system
         {
             InitializeComponent();
 
-            navButtons = new List<Button>() { btnProducts, btnInventory, btnSalesMng, mngbtn, homebtn };
+            navButtons = new List<Button>() { btnProducts, btnInventory, btnSalesMng, mngbtn, homebtn, button1 };
 
             currentUserRole = role; 
 
@@ -101,6 +101,7 @@ namespace point_of_sale_system
         private void button1_Click(object sender, EventArgs e)
         {
             showUserControl(new MessagesUC());
+            SetActiveButton(button1);
         }
     }
 }

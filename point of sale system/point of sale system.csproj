@@ -313,5 +313,17 @@
   <ItemGroup>
     <None Include="Resources\point-of-sale-icon-28 %281%29 %282%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale-mangment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about-us-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos-logo1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

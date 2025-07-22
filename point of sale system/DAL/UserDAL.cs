@@ -94,42 +94,89 @@ namespace point_of_sale_system.DAL
             return user;
         }
 
-        public bool IsAccountLocked(User user)
+        private void SetLockedStatus(string username, bool isLocked)
         {
-            if (user.LastAttempt == null) return false;
-
-            TimeSpan timeSinceLast = DateTime.Now - user.LastAttempt.Value;
-
-            if (user.FailedAttempts >= MaxAttemptsLevel3 && timeSinceLast.TotalHours < 24) return true;
-            if (user.FailedAttempts >= MaxAttemptsLevel2 && timeSinceLast.TotalMinutes < 5) return true;
-            if (user.FailedAttempts >= MaxAttemptsLevel1 && timeSinceLast.TotalMinutes < 1) return true;
-
-            return false;
-        }
-
-        public bool IncrementFailedAttempts(string username)
-        {
-            string query = @"UPDATE Users SET 
-                            FailedAttempts = FailedAttempts + 1,
-                            LastAttempt = GETDATE()
-                            WHERE Username = @Username";
+            string query = @"UPDATE Users SET is_locked = @IsLocked WHERE Username = @Username";
 
             try
             {
                 OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@IsLocked", isLocked);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
 
+
+        public bool IsAccountLocked(User user)
+        {
+            if (user.FailedAttempts < 6)
+                return false; // أقل من 6 محاولات: غير مقفل
+
+            if (user.LastAttempt == null)
+                return false; // لا وقت محاولات سابقة
+
+            TimeSpan timeSinceLast = DateTime.Now - user.LastAttempt.Value;
+
+            if (user.FailedAttempts == 6)
+            {
+                // أول مرة يصل 6 محاولات خاطئة، ينتظر 1 ساعة
+                if (timeSinceLast.TotalMinutes < 60)
+                {
+                    MessageBox.Show($"Too many failed attempts. Try again after {60 - (int)timeSinceLast.TotalMinutes} minutes.",
+                                    "Try Later", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true;
+                }
+                else
+                {
+                    // بعد مرور ساعة يسمح بمحاولة واحدة
+                    return false;
+                }
+            }
+            else if (user.FailedAttempts > 6)
+            {
+                // زيادة عن 6: يعني تمت محاولة بعد ساعة
+                if (timeSinceLast.TotalMinutes < 60)
+                {
+                    MessageBox.Show($"You must wait 1 hour between attempts after repeated failures.",
+                                    "Try Later", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true;
+                }
+                else
+                {
+                    // السماح بمحاولة جديدة كل ساعة
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
+
+
+        public bool IncrementFailedAttempts(string username)
+        {
+            string query = @"UPDATE Users SET 
+                    FailedAttempts = FailedAttempts + 1,
+                    LastAttempt = GETDATE()
+                    WHERE Username = @Username";
+
+            try
+            {
+                OpenConnection();
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@Username", username);
-
                     int rowsAffected = cmd.ExecuteNonQuery();
                     return rowsAffected > 0;
                 }
-            }
-            catch (SqlException ex)
-            {
-                Debug.WriteLine($"Database error in IncrementFailedAttempts: {ex.Message}");
-                throw new Exception("Failed to update login attempts due to a database error.", ex);
             }
             finally
             {
@@ -140,32 +187,27 @@ namespace point_of_sale_system.DAL
         public bool ResetFailedAttempts(string username)
         {
             string query = @"UPDATE Users SET 
-                           FailedAttempts = 0,
-                           LastAttempt = NULL
-                           WHERE Username = @Username";
+                    FailedAttempts = 0,
+                    LastAttempt = NULL,
+                    is_locked = 0
+                    WHERE Username = @Username";
 
             try
             {
                 OpenConnection();
-
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@Username", username);
-
                     int rowsAffected = cmd.ExecuteNonQuery();
                     return rowsAffected > 0;
                 }
-            }
-            catch (SqlException ex)
-            {
-                Debug.WriteLine($"Database error in ResetFailedAttempts: {ex.Message}");
-                throw new Exception("Failed to reset login attempts due to a database error.", ex);
             }
             finally
             {
                 CloseConnection();
             }
         }
+
         public bool VerifyCredentials(string username, string password)
         {
             try

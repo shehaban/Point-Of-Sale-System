@@ -63,6 +63,26 @@ namespace point_of_sale_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap about_us_icon {
+            get {
+                object obj = ResourceManager.GetObject("about-us-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contact {
+            get {
+                object obj = ResourceManager.GetObject("contact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_icon__2_ {
             get {
                 object obj = ResourceManager.GetObject("delete-icon (2)", resourceCulture);
@@ -136,6 +156,16 @@ namespace point_of_sale_system.Properties {
         internal static System.Drawing.Bitmap point_of_sale_icon_28__1___2_ {
             get {
                 object obj = ResourceManager.GetObject("point-of-sale-icon-28 (1) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pos_logo {
+            get {
+                object obj = ResourceManager.GetObject("pos-logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,16 @@ namespace point_of_sale_system.Properties {
         internal static System.Drawing.Bitmap POS_Software1 {
             get {
                 object obj = ResourceManager.GetObject("POS-Software1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sale_mangment {
+            get {
+                object obj = ResourceManager.GetObject("sale-mangment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

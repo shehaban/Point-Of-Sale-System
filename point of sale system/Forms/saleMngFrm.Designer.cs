@@ -77,7 +77,7 @@
             // 
             this.btnProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(128)))), ((int)(((byte)(175)))));
             this.btnProducts.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProducts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnProducts.Location = new System.Drawing.Point(12, 12);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(184, 98);
@@ -97,7 +97,7 @@
             // 
             this.homebtn.BackColor = System.Drawing.Color.Red;
             this.homebtn.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homebtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.homebtn.ForeColor = System.Drawing.Color.DarkRed;
             this.homebtn.Location = new System.Drawing.Point(12, 593);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(184, 95);
