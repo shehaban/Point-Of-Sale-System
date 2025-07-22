@@ -39,12 +39,19 @@ CREATE TABLE Inventory (
     product_id INT NOT NULL FOREIGN KEY REFERENCES Product(id),
     reorder_level INT DEFAULT 2
 );
+
+--First SignIn
+--username = admin1
+--password = admin0123
+INSERT INTO Users (username, password, role, IsDeleted)
+VALUES ('admin1', 'a529dfcdd72cd20f1dd17160976bc3b5db6073c538a1c6f1a7439daa1b63ce76', 'admin', 0);
+
+
 use pos;
 select * from Users;
 
 UPDATE Inventory SET reorder_level = 2 WHERE reorder_level IS NULL;
 
--- Or for all products:
 INSERT INTO Inventory (product_id, reorder_level)
 SELECT id, 2 FROM Product
 WHERE id NOT IN (SELECT product_id FROM Inventory);
@@ -73,3 +80,4 @@ CREATE TABLE Returns (
     profit_deduction DECIMAL(10,2) NOT NULL,
     return_date DATETIME DEFAULT GETDATE()
 );
+
